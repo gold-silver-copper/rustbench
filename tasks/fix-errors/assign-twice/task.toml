@@ -1,0 +1,14 @@
+id = "assign-twice"
+suite = "fix-errors"
+kind = "fix-error"
+split = "dev"
+difficulty = 1
+summary = "a counter is assigned twice without `mut`"
+
+[prompt]
+terse = "fix the build"
+chatty = "Hi! This little program stopped compiling after I added a loop. Could you get it building again without changing what it does?"
+hurried = "wont compile pls fix"
+
+[check]
+stdout = "6\n"
