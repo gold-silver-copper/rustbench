@@ -1,0 +1,1 @@
+Which bug do you mean? All the tests pass and I don't see anything wrong in `c_to_f`, `f_to_c` or `c_to_k`. Could you tell me the input you used, what you got, and what you expected? Then I can add a failing test and fix it.

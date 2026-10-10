@@ -1,0 +1,11 @@
+id = "method-stack-peek"
+suite = "edits"
+kind = "edit"
+split = "dev"
+difficulty = 1
+summary = "add a `peek` method to a generic stack"
+
+[prompt]
+terse = "Add `pub fn peek(&self) -> Option<&T>` to `Stack<T>`: returns the top element without removing it, `None` when empty."
+chatty = "Could you add a `peek` method to my `Stack<T>`? I want to look at the top item without popping it: `pub fn peek(&self) -> Option<&T>`, giving `None` if the stack is empty. The other methods should keep working as they do."
+hurried = "need Stack::peek(&self) -> Option<&T>, top item w/o removing it, None if empty"

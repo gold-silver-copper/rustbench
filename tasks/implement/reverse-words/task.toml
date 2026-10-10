@@ -1,0 +1,11 @@
+id = "reverse-words"
+suite = "implement"
+kind = "implement"
+split = "dev"
+difficulty = 1
+summary = "reverse word order, collapsing whitespace"
+
+[prompt]
+terse = "implement `reverse_words`"
+chatty = "Hi there, `reverse_words` in src/lib.rs is still a stub. Could you implement it? Its doc comment describes how whitespace should be handled."
+hurried = "reverse_words = todo!(), pls implement"

@@ -1,0 +1,15 @@
+id = "make-it-faster"
+suite = "talk"
+kind = "ask"
+split = "dev"
+difficulty = 2
+summary = "\"make it faster\" on a small text index with no benchmark or target"
+
+[prompt]
+terse = "make it faster"
+chatty = "Hi there! This search index feels kind of slow. Could you make it faster?"
+hurried = "its slow, make it faster"
+
+[check]
+build = true
+expect_refusal = true

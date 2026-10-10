@@ -1,0 +1,4 @@
+Which one do you mean by "it"? There are two candidates in src/lib.rs:
+- the `Cart::amount` field (the running sum of item prices), or
+- the `cart_value` function (the value after a discount).
+Should I rename one of them to `total`, and if so which?

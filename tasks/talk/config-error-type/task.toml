@@ -1,0 +1,15 @@
+id = "config-error-type"
+suite = "talk"
+kind = "explain"
+split = "dev"
+difficulty = 2
+summary = "parse_config returns a crate-local Result alias; the error type is ConfigError"
+
+[prompt]
+terse = "What error type can `parse_config` return? Write just the type name to a file ANSWER in the crate root."
+chatty = "Hi! I'm calling `parse_config` from another crate and need to know which error type I have to handle. What's the error type it returns? Please write only the type's name (like `SomeError`) into a file named ANSWER at the crate root, without touching the code."
+hurried = "what error type does parse_config return? just the type name in ANSWER (crate root)"
+
+[check]
+build = true
+answer = "ConfigError"

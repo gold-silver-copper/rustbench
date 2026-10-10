@@ -1,0 +1,17 @@
+id = "e0506"
+suite = "rustc-error-index"
+kind = "fix-error"
+split = "heldout"
+difficulty = 2
+summary = "An attempt was made to assign to a borrowed value."
+source = "rust-lang/rust@6e4cba3380a6f9e1e4d7672e11e40372bf04e873 compiler/rustc_error_codes/src/error_codes/E0506.md"
+license = "MIT OR Apache-2.0"
+
+[prompt]
+terse = "make this compile; keep the behavior the same"
+chatty = "Hey, I'm stuck on a compiler error in this little crate. Can you fix it so it builds? Please keep the behavior as it is."
+hurried = "compile error, make it build quick"
+
+[check]
+build = true
+stdout = "Num: 6, Moved num: 5\n"

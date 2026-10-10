@@ -1,0 +1,11 @@
+id = "trait-not-in-scope"
+suite = "fix-errors"
+kind = "fix-error"
+split = "dev"
+difficulty = 3
+summary = "trait methods are called in another module that doesn't import the trait"
+
+[prompt]
+terse = "fix the build"
+chatty = "Hey! I split my shapes code into a couple of files and now report.rs says there's no method `area`, even though both shapes clearly implement it. Could you fix it?"
+hurried = "no method area in report.rs but its implemented?? fix"

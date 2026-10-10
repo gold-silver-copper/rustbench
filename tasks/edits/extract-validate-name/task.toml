@@ -1,0 +1,11 @@
+id = "extract-validate-name"
+suite = "edits"
+kind = "edit"
+split = "dev"
+difficulty = 2
+summary = "extract the username check duplicated in register and rename into users::validate_username"
+
+[prompt]
+terse = "`Registry::register` and `Registry::rename` duplicate the username validation. Extract it into `pub fn validate_username(name: &str) -> Result<(), String>` in src/users.rs (so `task::users::validate_username`) and call it from both. Same rules and error messages."
+chatty = "Hi! I noticed the username checks in `register` and `rename` are copy-pasted, and I'm worried they'll drift apart. Could you pull them out into a public function `validate_username(name: &str) -> Result<(), String>` in the users module (so it's reachable as `task::users::validate_username`), and have both methods use it? The rules and the error messages should stay exactly as they are now."
+hurried = "dedupe the username validation in register/rename -> pub fn validate_username(name: &str) -> Result<(), String> in users.rs, use it in both. dont change the rules"

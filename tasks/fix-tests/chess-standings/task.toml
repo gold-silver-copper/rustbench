@@ -1,0 +1,14 @@
+id = "chess-standings"
+suite = "fix-tests"
+kind = "fix-test"
+split = "heldout"
+difficulty = 2
+summary = "sorting mistake: the final name tie-break is Z to A instead of A to Z"
+
+[prompt]
+terse = "standings test fails"
+chatty = "Hi! The chess club standings put Zoe ahead of Adam when they're level on points and wins, and `ties_go_alphabetical` fails. Could you fix the sort?"
+hurried = "standings order wrong on ties, test fails fix"
+
+[check]
+test = true

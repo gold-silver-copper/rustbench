@@ -1,0 +1,11 @@
+id = "derive-card-traits"
+suite = "edits"
+kind = "edit"
+split = "heldout"
+difficulty = 1
+summary = "derive Debug, Clone, Copy, PartialEq, Eq on the card types"
+
+[prompt]
+terse = "Derive `Debug, Clone, Copy, PartialEq, Eq` on `Card`, `Rank` and `Suit`."
+chatty = "I keep wanting to print cards with {:?}, compare them with == and copy them around, but none of my card types support that yet. Could you derive Debug, Clone, Copy, PartialEq and Eq on all three: `Card`, `Rank` and `Suit`? Behaviour should otherwise stay as it is."
+hurried = "derive Debug Clone Copy PartialEq Eq on Card, Rank and Suit pls"

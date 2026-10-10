@@ -1,0 +1,11 @@
+id = "trailing-semicolon"
+suite = "fix-errors"
+kind = "fix-error"
+split = "dev"
+difficulty = 1
+summary = "a function's final expression ends with a semicolon"
+
+[prompt]
+terse = "fix"
+chatty = "Hello! My loan calculator says mismatched types on the interest method and I don't get why. Can you get it to build?"
+hurried = "mismatched types expected f64 found () fix"

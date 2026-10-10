@@ -1,0 +1,14 @@
+id = "shipping-boxes"
+suite = "fix-tests"
+kind = "fix-test"
+split = "dev"
+difficulty = 1
+summary = "wrong rounding: the box count rounds down and leaves items out"
+
+[prompt]
+terse = "boxes test fails, fix"
+chatty = "Hi! Our shipping estimator says 25 items fit in 2 boxes of 12, and `leftover_items_need_a_box` fails. Could you fix the code so the test passes?"
+hurried = "box count too low test red fix pls"
+
+[check]
+test = true

@@ -1,0 +1,11 @@
+id = "const-vat-rate"
+suite = "edits"
+kind = "edit"
+split = "dev"
+difficulty = 1
+summary = "replace the magic VAT rate 0.2 with a named constant in the pricing module"
+
+[prompt]
+terse = "Add `pub const VAT_RATE: f64 = 0.2;` to src/pricing.rs and replace every hard-coded `0.2` VAT rate in the crate with it."
+chatty = "Our VAT rate (20%) is written as a bare `0.2` in a bunch of places, both in pricing.rs and in the invoice code. Could you introduce a public constant `VAT_RATE: f64 = 0.2` in src/pricing.rs, so it's `task::pricing::VAT_RATE`, and make everything use it? Numbers should come out exactly the same."
+hurried = "vat 0.2 is hardcoded all over, add pub const VAT_RATE: f64 = 0.2 in pricing.rs and use it everywhere pls"

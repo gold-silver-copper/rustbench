@@ -1,0 +1,11 @@
+id = "int-float-divide"
+suite = "fix-errors"
+kind = "fix-error"
+split = "dev"
+difficulty = 1
+summary = "an integer is divided by a float"
+
+[prompt]
+terse = "fix the error"
+chatty = "Hi there! Average star rating for a review page, but the division won't compile. Can you make it work? It should give fractional averages."
+hurried = "cant divide u32 by f64 fix pls"

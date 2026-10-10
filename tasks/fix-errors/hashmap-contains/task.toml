@@ -1,0 +1,11 @@
+id = "hashmap-contains"
+suite = "fix-errors"
+kind = "fix-error"
+split = "heldout"
+difficulty = 1
+summary = "HashMap is asked for a method it doesn't have (contains instead of contains_key)"
+
+[prompt]
+terse = "fix build"
+chatty = "Hello! User registration: don't add a name that's already taken. The check doesn't compile, no method found. Could you fix it?"
+hurried = "no method contains on hashmap fix"

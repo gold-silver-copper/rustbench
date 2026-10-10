@@ -1,0 +1,11 @@
+/// A log line "LEVEL: message", borrowed from the input.
+#[derive(Debug, PartialEq)]
+pub struct LogLine<'a> {
+    pub level: &'a str,
+    pub message: &'a str,
+}
+
+pub fn parse(line: &str) -> Option<LogLine> {
+    let (level, message) = line.split_once(':')?;
+    Some(LogLine { level: level.trim(), message: message.trim() })
+}

@@ -1,0 +1,11 @@
+id = "first-unbalanced"
+suite = "implement"
+kind = "implement"
+split = "dev"
+difficulty = 3
+summary = "find the first bracket nesting error by char index"
+
+[prompt]
+terse = "implement `first_unbalanced`"
+chatty = "Hello! `first_unbalanced` in src/lib.rs needs implementing. It checks bracket nesting and reports where the first problem is; the doc comment says exactly which position to report."
+hurried = "implement first_unbalanced, which index to return is in the doc"

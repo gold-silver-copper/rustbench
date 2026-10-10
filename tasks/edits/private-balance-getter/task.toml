@@ -1,0 +1,11 @@
+id = "private-balance-getter"
+suite = "edits"
+kind = "edit"
+split = "dev"
+difficulty = 2
+summary = "make `Wallet::balance` private and add a getter"
+
+[prompt]
+terse = "Make the `balance` field of `Wallet` private and add `pub fn balance(&self) -> i64`. Update all code that reads the field directly."
+chatty = "People keep poking at `wallet.balance` directly, which defeats the point of having `deposit` and `spend`. Could you make the `balance` field private, add a getter `pub fn balance(&self) -> i64`, and fix up everything that currently reads the field (main.rs and the report module) to use the getter? `owner` can stay public."
+hurried = "make Wallet.balance private + add getter pub fn balance(&self) -> i64, fix callers"

@@ -1,0 +1,11 @@
+id = "ord-version"
+suite = "edits"
+kind = "edit"
+split = "dev"
+difficulty = 3
+summary = "implement Eq/Ord for Version by major, minor, patch, ignoring the label field"
+
+[prompt]
+terse = "Implement PartialEq, Eq, PartialOrd and Ord for `Version`: compare major, then minor, then patch. The `label` field must be ignored by both equality and ordering."
+chatty = "Hey! I'd like to be able to sort `Version`s and compare them with `==` and `<`. Could you implement PartialEq, Eq, PartialOrd and Ord for it? They should go by major first, then minor, then patch. The `label` is just a display name (like \"beta\"), so it shouldn't count at all: two versions with the same numbers are equal even if their labels differ. Then `latest` in releases.rs can probably just use that ordering."
+hurried = "need Version to be sortable/comparable (PartialEq Eq PartialOrd Ord). major then minor then patch, ignore label completly, same numbers diff label = equal"

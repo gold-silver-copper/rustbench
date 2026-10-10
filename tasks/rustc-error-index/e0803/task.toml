@@ -1,0 +1,17 @@
+id = "e0803"
+suite = "rustc-error-index"
+kind = "fix-error"
+split = "heldout"
+difficulty = 2
+summary = "A trait implementation returns a reference without an explicit lifetime linking it to `self`. It commonly arises in generic trait implementations requiring explicit lifetime bounds."
+source = "rust-lang/rust@6e4cba3380a6f9e1e4d7672e11e40372bf04e873 compiler/rustc_error_codes/src/error_codes/E0803.md"
+license = "MIT OR Apache-2.0"
+
+[prompt]
+terse = "get the crate compiling without changing what it does"
+chatty = "Hi! This crate doesn't compile right now. Could you get it building again without changing what the code is meant to do?"
+hurried = "build broken, fix it but dont change what it does"
+
+[check]
+max_shrink = 0.25
+build = true

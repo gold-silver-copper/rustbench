@@ -123,6 +123,11 @@ struct Check {
     expect_refusal: bool,
     #[serde(default)]
     timeout_secs: Option<u64>,
+    /// Fail if the agent removed more than this fraction of the Rust code
+    /// (non-whitespace characters in `.rs` files): stops "fixes" that just
+    /// delete the broken part.
+    #[serde(default)]
+    max_shrink: Option<f64>,
 }
 
 /// One run's result.
@@ -204,7 +209,7 @@ fn snapshot(dir: &Path) -> BTreeMap<PathBuf, Vec<u8>> {
         for e in rd.flatten() {
             let p = e.path();
             let name = e.file_name();
-            if name == "target" || name == REPLY {
+            if name == "target" || name == REPLY || name == "Cargo.lock" {
                 continue;
             }
             if p.is_dir() {
@@ -287,6 +292,15 @@ fn cargo(work: &Path, target: &Path, args: &[&str]) -> Command {
     c
 }
 
+/// Non-whitespace characters in the `.rs` files of a snapshot.
+fn code_size(files: &BTreeMap<PathBuf, Vec<u8>>) -> usize {
+    files
+        .iter()
+        .filter(|(p, _)| p.extension().is_some_and(|e| e == "rs"))
+        .map(|(_, b)| b.iter().filter(|c| !c.is_ascii_whitespace()).count())
+        .sum()
+}
+
 fn has_tests(dir: &Path) -> bool {
     snapshot(dir).iter().any(|(p, b)| {
         p.extension().is_some_and(|e| e == "rs") && String::from_utf8_lossy(b).contains("#[test]")
@@ -351,7 +365,14 @@ fn check(t: &Task, work: &Path, target: &Path) -> Result<(String, String)> {
     }
     if let Some(want) = &t.check.answer {
         let got = std::fs::read_to_string(work.join("ANSWER")).unwrap_or_default();
-        if got.trim() != want.trim() {
+        // Wrapping backticks or quotes around an otherwise exact answer are fine.
+        let clean = |s: &str| {
+            s.trim()
+                .trim_matches(|c| c == '`' || c == '"' || c == '\'')
+                .trim()
+                .to_string()
+        };
+        if clean(&got) != clean(want) {
             return Ok(("fail".into(), format!("wrong answer: {:?}", got.trim())));
         }
     }
@@ -439,6 +460,16 @@ fn run_one(
             detail: first_lines(&msg, 3),
             ..base
         });
+    }
+    if let Some(limit) = t.check.max_shrink {
+        let (a, b) = (code_size(&before), code_size(&snapshot(work)));
+        if a > 0 && (a.saturating_sub(b) as f64) / (a as f64) > limit {
+            return Ok(Outcome {
+                outcome: "fail".into(),
+                detail: format!("removed too much code ({a} -> {b} characters)"),
+                ..base
+            });
+        }
     }
     copy_dir(&t.dir.join("hidden"), work)?;
     let cs = Instant::now();

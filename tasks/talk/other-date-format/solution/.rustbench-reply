@@ -1,0 +1,1 @@
+Which format do you want? The export uses `DateFormat::Iso` (2024-03-09) now, and there are two others: `Us` (03/09/2024) and `European` (09.03.2024). Should I change `EXPORT_FORMAT` to one of those, or did you mean a different place where dates are formatted?

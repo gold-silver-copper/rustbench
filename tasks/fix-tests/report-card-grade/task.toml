@@ -1,0 +1,14 @@
+id = "report-card-grade"
+suite = "fix-tests"
+kind = "fix-test"
+split = "heldout"
+difficulty = 1
+summary = "wrong comparison: exactly 90 percent gets a B instead of an A"
+
+[prompt]
+terse = "grade test fails"
+chatty = "Hello! Our report-card tool gave a student with exactly 90% a B, and `ninety_is_an_a` fails. The grading rules are in the doc comment. Could you fix the code?"
+hurried = "90% should be A, test fails, fix"
+
+[check]
+test = true

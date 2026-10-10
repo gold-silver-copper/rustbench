@@ -1,0 +1,5 @@
+fn main() {
+    'a: loop {
+        break 'a;
+    }
+}

@@ -1,0 +1,15 @@
+id = "custom-drop"
+suite = "talk"
+kind = "explain"
+split = "heldout"
+difficulty = 1
+summary = "find the one type with a hand-written Drop impl"
+
+[prompt]
+terse = "Which type has a custom `Drop` implementation? Write just the type name to a file ANSWER in the crate root."
+chatty = "Hi there! Files keep disappearing from our scratch folder and I suspect something cleans them up on drop. Which type in this crate has its own `Drop` implementation? Please write only the type name into a file called ANSWER at the crate root, no code changes."
+hurried = "which type has a custom Drop impl? name only in ANSWER file crate root"
+
+[check]
+build = true
+answer = "TempFile"

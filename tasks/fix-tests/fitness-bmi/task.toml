@@ -1,0 +1,14 @@
+id = "fitness-bmi"
+suite = "fix-tests"
+kind = "fix-test"
+split = "heldout"
+difficulty = 1
+summary = "wrong operator grouping: weight / height * height instead of dividing by the square"
+
+[prompt]
+terse = "bmi test failing"
+chatty = "Hey! The fitness app says everyone's BMI equals their weight, and `bmi_of_tall_person` fails. Could you fix the formula code?"
+hurried = "bmi wrong test fails pls fix"
+
+[check]
+test = true

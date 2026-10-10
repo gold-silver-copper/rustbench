@@ -1,0 +1,17 @@
+id = "e0015"
+suite = "rustc-error-index"
+kind = "fix-error"
+split = "heldout"
+difficulty = 1
+summary = "A non-`const` function was called in a `const` context."
+source = "rust-lang/rust@6e4cba3380a6f9e1e4d7672e11e40372bf04e873 compiler/rustc_error_codes/src/error_codes/E0015.md"
+license = "MIT OR Apache-2.0"
+
+[prompt]
+terse = "fix the build"
+chatty = "Could you take a look at this code? cargo build fails and I can't see why. I'd like it to compile while still doing the same thing."
+hurried = "build broken, fix it but dont change what it does"
+
+[check]
+max_shrink = 0.25
+build = true

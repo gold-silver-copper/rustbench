@@ -1,0 +1,11 @@
+id = "display-temperature"
+suite = "edits"
+kind = "edit"
+split = "dev"
+difficulty = 2
+summary = "implement Display for `Temperature` as one decimal plus °C, e.g. `21.5°C`"
+
+[prompt]
+terse = "Implement `std::fmt::Display` for `Temperature`: the Celsius value with one decimal followed by `°C`, e.g. `21.5°C`, `-3.0°C`."
+chatty = "Hi! I'd love to be able to just write `println!(\"{}\", temp)` for a `Temperature`. Could you implement `Display` for it? It should print the Celsius value with exactly one decimal place and then `°C` with no space, so 21.5 shows as `21.5°C` and minus three as `-3.0°C`."
+hurried = "impl Display for Temperature pls. one decimal + °C no space, like 21.5°C or -3.0°C"

@@ -1,0 +1,15 @@
+id = "struct-with-velocity"
+suite = "talk"
+kind = "explain"
+split = "dev"
+difficulty = 1
+summary = "find the one struct with a field named exactly `velocity`"
+
+[prompt]
+terse = "Which struct has a field named exactly `velocity`? Write just the struct name to a file ANSWER in the crate root."
+chatty = "Hey, I'm trying to find where movement speed is stored in this little game. Which struct has a field called exactly `velocity`? Could you write only the struct's name into a file named ANSWER at the crate root? Don't change the code."
+hurried = "which struct has the velocity field?? name only into ANSWER (root of crate)"
+
+[check]
+build = true
+answer = "Player"

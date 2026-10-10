@@ -1,0 +1,11 @@
+id = "lru-cache"
+suite = "implement"
+kind = "implement"
+split = "dev"
+difficulty = 4
+summary = "an LRU cache struct with get/peek/put/len and eviction reporting"
+
+[prompt]
+terse = "implement `LruCache`"
+chatty = "Hello! I sketched an `LruCache` type in src/lib.rs but every method is still `todo!()`, and the struct has no fields yet. Could you implement it? The doc comments describe what counts as a use, what `put` returns and how capacity 0 behaves."
+hurried = "LruCache is all todo!(), implement it. pick whatever fields u want, semantics in the doc comments"

@@ -1,0 +1,11 @@
+id = "default-server-config"
+suite = "edits"
+kind = "edit"
+split = "dev"
+difficulty = 2
+summary = "implement Default for `ServerConfig` with stated values"
+
+[prompt]
+terse = "Implement `Default` for `ServerConfig`: host \"127.0.0.1\", port 8080, max_connections 64, verbose false."
+chatty = "Hey! I'd like to be able to write `ServerConfig::default()` (and `..Default::default()` in struct literals). Could you implement `Default` for it? The defaults should be host `127.0.0.1`, port 8080, max_connections 64, and verbose turned off. Those are the same values the config parser starts from today."
+hurried = "ServerConfig needs Default impl. host 127.0.0.1, port 8080, max_connections 64, verbose false"

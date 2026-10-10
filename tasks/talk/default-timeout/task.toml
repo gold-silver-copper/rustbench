@@ -1,0 +1,15 @@
+id = "default-timeout"
+suite = "talk"
+kind = "explain"
+split = "dev"
+difficulty = 2
+summary = "ClientConfig::default() timeout; a stale doc says 60, the const is 30, `new` uses 10"
+
+[prompt]
+terse = "What is `timeout_secs` on `ClientConfig::default()`? Write just the number to a file ANSWER in the crate root."
+chatty = "Hi! Our requests seem to time out sooner than the docs say. What value does `timeout_secs` have on a config made with `ClientConfig::default()`? Please write only the number into a file called ANSWER at the crate root, I just want to know for now."
+hurried = "whats timeout_secs on ClientConfig::default()? number only in ANSWER (crate root)"
+
+[check]
+build = true
+answer = "30"

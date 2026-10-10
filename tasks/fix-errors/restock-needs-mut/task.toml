@@ -1,0 +1,11 @@
+id = "restock-needs-mut"
+suite = "fix-errors"
+kind = "fix-error"
+split = "heldout"
+difficulty = 2
+summary = "a &self method calls a method that needs &mut self"
+
+[prompt]
+terse = "fix the build"
+chatty = "Hello! Vending machine shelf code: restocking a single slot works but `restock_all` doesn't compile. Could you take a look?"
+hurried = "restock_all cannot borrow as mutable fix pls"

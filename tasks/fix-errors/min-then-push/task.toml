@@ -1,0 +1,11 @@
+id = "min-then-push"
+suite = "fix-errors"
+kind = "fix-error"
+split = "heldout"
+difficulty = 2
+summary = "a reference from iter().min() is held while the Vec is pushed to"
+
+[prompt]
+terse = "make it build"
+chatty = "Hey! Lap timer: adding a lap should return the best lap so far, counting the new one. The borrow checker complains about the push. Can you fix it?"
+hurried = "cannot borrow laps as mutable fix"

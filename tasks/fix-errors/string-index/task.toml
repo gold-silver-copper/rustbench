@@ -1,0 +1,11 @@
+id = "string-index"
+suite = "fix-errors"
+kind = "fix-error"
+split = "dev"
+difficulty = 2
+summary = "a &str is indexed with an integer"
+
+[prompt]
+terse = "fix compile"
+chatty = "Hello! I want initials from full names (\"Ada Lovelace\" gives \"AL\") but Rust won't let me index the string. Could you fix it? Names can have accents, by the way."
+hurried = "cant index str, initials fn, fix pls"

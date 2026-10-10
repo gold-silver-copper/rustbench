@@ -1,0 +1,14 @@
+id = "arcade-leaderboard"
+suite = "fix-tests"
+kind = "fix-test"
+split = "dev"
+difficulty = 2
+summary = "sorting mistake: the high-score table is sorted lowest first"
+
+[prompt]
+terse = "leaderboard test fails"
+chatty = "Hi! Our arcade game's high-score table shows the worst players at the top. `top_two_scores` fails. Could you fix the sorting in the library?"
+hurried = "highscores upside down, test fails fix"
+
+[check]
+test = true

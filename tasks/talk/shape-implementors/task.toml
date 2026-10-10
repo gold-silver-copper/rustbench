@@ -1,0 +1,15 @@
+id = "shape-implementors"
+suite = "talk"
+kind = "explain"
+split = "dev"
+difficulty = 2
+summary = "count types implementing Shape; Label implements only Draw and Circle implements both"
+
+[prompt]
+terse = "How many types implement the `Shape` trait? Write just the number to a file ANSWER in the crate root."
+chatty = "Hello! I'm about to add a required method to the `Shape` trait and want to know how many impls I'll have to update. How many types implement `Shape`? Please write only the number into a file named ANSWER at the crate root, no code changes."
+hurried = "how many types impl Shape? just number in ANSWER file crate root"
+
+[check]
+build = true
+answer = "3"

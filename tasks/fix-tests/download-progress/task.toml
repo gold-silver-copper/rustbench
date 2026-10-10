@@ -1,0 +1,14 @@
+id = "download-progress"
+suite = "fix-tests"
+kind = "fix-test"
+split = "dev"
+difficulty = 1
+summary = "swapped arguments: the progress percentage divides the size by the bytes received"
+
+[prompt]
+terse = "progress test fails, fix"
+chatty = "Hey! The downloader's status line shows silly percentages like 250%, and `status_shows_percent_done` fails. Can you fix the code so it reports progress properly?"
+hurried = "download % is wrong test fails, plz fix"
+
+[check]
+test = true

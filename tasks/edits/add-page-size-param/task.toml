@@ -1,0 +1,11 @@
+id = "add-page-size-param"
+suite = "edits"
+kind = "edit"
+split = "heldout"
+difficulty = 2
+summary = "add a page_size parameter to a paginate function and update its callers"
+
+[prompt]
+terse = "Add a `page_size: usize` parameter to `paginate`, after `page`, replacing the hardcoded 10. Signature: `paginate<T: Clone>(items: &[T], page: usize, page_size: usize) -> Vec<T>`. Existing callers pass 10."
+chatty = "Hi! `paginate` in src/paging.rs always uses 10 items per page, and I need other page sizes for a new screen. Could you add a `page_size: usize` parameter right after `page` (so it's `paginate(items, page, page_size)`) and use it instead of the hardcoded 10? Everything that calls it today should keep its current behaviour, so just pass 10 there."
+hurried = "paginate needs a page_size: usize param after page instead of the hardcoded 10. existing calls just pass 10 so nothing changes"

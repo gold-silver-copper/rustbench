@@ -1,0 +1,14 @@
+id = "note-word-count"
+suite = "fix-tests"
+kind = "fix-test"
+split = "dev"
+difficulty = 1
+summary = "missing edge case: word count splits on single spaces, so empty text has one word"
+
+[prompt]
+terse = "word count test fails"
+chatty = "Hey! The status bar of my note-taking app says a brand new empty note has 1 word, and `empty_note_has_no_words` fails. Could you fix the counting?"
+hurried = "empty note says 1 word lol. test fails fix"
+
+[check]
+test = true

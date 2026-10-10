@@ -1,0 +1,15 @@
+id = "other-date-format"
+suite = "talk"
+kind = "ask"
+split = "heldout"
+difficulty = 2
+summary = "\"switch to the other date format\" when there are two other formats"
+
+[prompt]
+terse = "switch it to the other date format"
+chatty = "Hey there! The dates in the export look odd to our team. Could you switch it over to the other date format?"
+hurried = "use the other date format pls"
+
+[check]
+build = true
+expect_refusal = true

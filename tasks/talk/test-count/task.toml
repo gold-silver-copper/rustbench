@@ -1,0 +1,15 @@
+id = "test-count"
+suite = "talk"
+kind = "explain"
+split = "heldout"
+difficulty = 2
+summary = "count #[test] functions across unit and integration tests, including an ignored one"
+
+[prompt]
+terse = "How many tests does this crate have, counting every `#[test]` function including ignored ones? Write just the number to a file ANSWER in the crate root."
+chatty = "Hi! I'm filling in a coverage spreadsheet for this crate. How many tests does it have in total? Count every `#[test]` function, ignored ones too. Please write only the number into a file named ANSWER at the crate root, and don't change any code."
+hurried = "how many tests in this crate (every #[test] fn, ignored too)? number only in ANSWER at crate root"
+
+[check]
+build = true
+answer = "6"

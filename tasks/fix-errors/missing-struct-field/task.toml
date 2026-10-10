@@ -1,0 +1,11 @@
+id = "missing-struct-field"
+suite = "fix-errors"
+kind = "fix-error"
+split = "dev"
+difficulty = 2
+summary = "a struct literal in another file lacks a newly added field"
+
+[prompt]
+terse = "fix the build"
+chatty = "Hey! I added a reorder level to inventory items (it's optional in the input file) and the loader doesn't compile anymore. Could you fix it?"
+hurried = "loader.rs missing field error, fix"

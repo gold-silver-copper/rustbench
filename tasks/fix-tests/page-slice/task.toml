@@ -1,0 +1,14 @@
+id = "page-slice"
+suite = "fix-tests"
+kind = "fix-test"
+split = "dev"
+difficulty = 1
+summary = "off-by-one: a page of search results stops one item early"
+
+[prompt]
+terse = "fix the failing pagination test"
+chatty = "Hi! I'm working on the pager for our search results and `first_page_shows_three_items` keeps failing. The test matches what the docs say, so I think the bug is in the library. Could you fix it?"
+hurried = "pager test fails, fix teh code pls not the test"
+
+[check]
+test = true

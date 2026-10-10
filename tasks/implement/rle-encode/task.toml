@@ -1,0 +1,11 @@
+id = "rle-encode"
+suite = "implement"
+kind = "implement"
+split = "dev"
+difficulty = 2
+summary = "run-length encode a string, count omitted for runs of one"
+
+[prompt]
+terse = "implement `rle_encode`"
+chatty = "Hey! Could you implement `rle_encode` in src/lib.rs? It's a run-length encoder; the doc comment has the exact output format, including when the count is left out."
+hurried = "rle_encode still todo, implement it (format in doc comment)"

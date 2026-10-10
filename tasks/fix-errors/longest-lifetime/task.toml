@@ -1,0 +1,11 @@
+id = "longest-lifetime"
+suite = "fix-errors"
+kind = "fix-error"
+split = "dev"
+difficulty = 1
+summary = "a function returning one of two &str parameters lacks a lifetime"
+
+[prompt]
+terse = "fix"
+chatty = "Hey, I wrote a tiny helper that picks the longer of two titles and the compiler wants something about lifetimes. Could you make it compile?"
+hurried = "missing lifetime specifier error fix it"

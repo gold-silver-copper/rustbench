@@ -1,0 +1,17 @@
+id = "e0050"
+suite = "rustc-error-index"
+kind = "fix-error"
+split = "dev"
+difficulty = 1
+summary = "An attempted implementation of a trait method has the wrong number of function parameters."
+source = "rust-lang/rust@6e4cba3380a6f9e1e4d7672e11e40372bf04e873 compiler/rustc_error_codes/src/error_codes/E0050.md"
+license = "MIT OR Apache-2.0"
+
+[prompt]
+terse = "fix the compile error"
+chatty = "Hey, I'm stuck on a compiler error in this little crate. Can you fix it so it builds? Please keep the behavior as it is."
+hurried = "cargo build fails?? fix pls"
+
+[check]
+max_shrink = 0.25
+build = true

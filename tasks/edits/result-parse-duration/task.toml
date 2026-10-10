@@ -1,0 +1,11 @@
+id = "result-parse-duration"
+suite = "edits"
+kind = "edit"
+split = "heldout"
+difficulty = 3
+summary = "make a panicking duration parser return Result<u64, String> and propagate it through callers"
+
+[prompt]
+terse = "`parse_duration` panics on bad input. Change it to return `Result<u64, String>` (Err with a message instead of panicking) and update all callers: `Config::parse` should propagate the error with `?` (returning `Result<Config, String>`), and main should print the error instead of crashing."
+chatty = "Hello! Our backup tool crashes whenever someone typos a duration in the config file, because `parse_duration` just panics. Could you change it to return `Result<u64, String>` instead, with an error message for bad input like \"5x\" or \"\"? Then please thread that through: `Config::parse` should return `Result<Config, String>` and pass the error up with `?`, and `main` should print the error rather than panicking. Valid inputs (\"30s\", \"5m\", \"2h\") should give the same seconds as before."
+hurried = "parse_duration panics on garbage input, make it return Result<u64, String>. Config::parse -> Result<Config, String> using ?, main prints the error. same values for good input"

@@ -1,0 +1,14 @@
+id = "bill-split-zero"
+suite = "fix-tests"
+kind = "fix-test"
+split = "heldout"
+difficulty = 1
+summary = "missing edge case: splitting a bill between zero people divides by zero"
+
+[prompt]
+terse = "split test panics, fix"
+chatty = "Hi! Our bill-splitting helper crashes when nobody is at the table yet, and `nobody_at_the_table` fails with a panic. Could you fix the function so the test passes?"
+hurried = "split bill crashes w 0 people, test fails fix"
+
+[check]
+test = true

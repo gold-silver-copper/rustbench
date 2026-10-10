@@ -1,0 +1,1 @@
+Faster at what, and by how much? There's no benchmark or timing in the repo, and both `Index::add` and `Index::search` are already reasonable for their job. Which operation is slow for you (indexing or searching), roughly how many documents and how long are they, and what time would be good enough? With that I can measure first and then change the right part.

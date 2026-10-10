@@ -1,0 +1,15 @@
+id = "defining-module"
+suite = "talk"
+kind = "explain"
+split = "dev"
+difficulty = 1
+summary = "round_cents is re-exported from lib.rs and used elsewhere; it is defined in `money`"
+
+[prompt]
+terse = "Which module defines `round_cents`? Write just the module name to a file ANSWER in the crate root."
+chatty = "Hey! I want to read the actual implementation of `round_cents` but there are a few files using it. Which module is it defined in? Please write only the module name (just the name, like `foo`, no path or .rs) into a file called ANSWER at the crate root."
+hurried = "where is round_cents defined? module name only into ANSWER (crate root), no path"
+
+[check]
+build = true
+answer = "money"

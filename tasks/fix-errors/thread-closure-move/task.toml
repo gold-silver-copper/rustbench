@@ -1,0 +1,11 @@
+id = "thread-closure-move"
+suite = "fix-errors"
+kind = "fix-error"
+split = "dev"
+difficulty = 2
+summary = "a spawned thread's closure borrows a local instead of taking it"
+
+[prompt]
+terse = "make it compile"
+chatty = "Hi! I'm trying out threads to sum chunks of a big list in parallel. The spawn line doesn't compile, it says the closure may outlive something. Could you fix it?"
+hurried = "thread spawn closure error fix pls"

@@ -1,0 +1,11 @@
+id = "question-mark-option"
+suite = "fix-errors"
+kind = "fix-error"
+split = "heldout"
+difficulty = 2
+summary = "`?` is applied to a Result inside a function returning Option"
+
+[prompt]
+terse = "fix"
+chatty = "Hi! Config reader: `value` takes a line like \"retries=3\" and gives the number, or None if the line is malformed. The second `?` doesn't compile. Could you fix it?"
+hurried = "? on parse doesnt compile in fn returning option, fix"

@@ -1,0 +1,11 @@
+id = "hashset-key-hash"
+suite = "fix-errors"
+kind = "fix-error"
+split = "heldout"
+difficulty = 1
+summary = "a struct collected into a HashSet doesn't derive Hash"
+
+[prompt]
+terse = "fix"
+chatty = "Hey! For a little maze game I count how many distinct tiles the player walked over. The HashSet line doesn't compile. Can you fix it?"
+hurried = "hashset collect error Tile fix"

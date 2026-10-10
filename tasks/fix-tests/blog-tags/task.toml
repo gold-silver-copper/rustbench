@@ -1,0 +1,14 @@
+id = "blog-tags"
+suite = "fix-tests"
+kind = "fix-test"
+split = "dev"
+difficulty = 1
+summary = "dedup mistake: duplicates are removed before sorting, so non-adjacent ones survive"
+
+[prompt]
+terse = "tags test failing, fix"
+chatty = "Hello! Blog posts end up with the same tag twice, e.g. \"rust\" listed two times, and `duplicate_tags_are_merged` fails. Could you fix the tag cleanup?"
+hurried = "dup tags not removed, test fail fix"
+
+[check]
+test = true

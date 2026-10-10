@@ -1,0 +1,1 @@
+There are two deprecated functions in this crate: `parse_date_v1` in src/dates.rs and `legacy_format_price` in src/prices.rs. Which one should I remove, or do you want both gone? Since they're `pub`, removing them is a breaking change for any caller outside this crate.

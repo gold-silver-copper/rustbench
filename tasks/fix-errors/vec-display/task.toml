@@ -1,0 +1,14 @@
+id = "vec-display"
+suite = "fix-errors"
+kind = "fix-error"
+split = "dev"
+difficulty = 1
+summary = "a Vec is printed with {} instead of {:?}"
+
+[prompt]
+terse = "fix it"
+chatty = "Hey! Inventory restock report: it should print the list of items that are running low, like the comment in main says, but it won't compile. Can you fix it?"
+hurried = "println of vec doesnt compile fix"
+
+[check]
+stdout = "restock: [\"bolts\", \"washers\"]\n"

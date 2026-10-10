@@ -1,0 +1,14 @@
+id = "upload-backoff"
+suite = "fix-tests"
+kind = "fix-test"
+split = "heldout"
+difficulty = 1
+summary = "off-by-one: the retry schedule has one delay fewer than the retries allowed"
+
+[prompt]
+terse = "backoff test fails"
+chatty = "Hey! Our uploader is allowed 3 retries but the backoff schedule only has 2 delays, so `three_retries_three_delays` fails. Could you fix the schedule code?"
+hurried = "retry delays missing one, test failing fix"
+
+[check]
+test = true

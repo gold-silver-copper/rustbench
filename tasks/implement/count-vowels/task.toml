@@ -1,0 +1,11 @@
+id = "count-vowels"
+suite = "implement"
+kind = "implement"
+split = "dev"
+difficulty = 1
+summary = "count ASCII vowels case-insensitively; y and accented letters are not vowels"
+
+[prompt]
+terse = "implement `count_vowels`"
+chatty = "Hey, could you write the body of `count_vowels` in src/lib.rs? The doc comment spells out exactly which characters count."
+hurried = "need count_vowels implemented, see the docs on it"

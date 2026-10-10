@@ -1,0 +1,14 @@
+id = "frost-alert"
+suite = "fix-tests"
+kind = "fix-test"
+split = "dev"
+difficulty = 1
+summary = "wrong comparison: frost risk uses < where the limit itself counts"
+
+[prompt]
+terse = "frost test fails. fix"
+chatty = "Morning! Our garden weather station is supposed to warn about frost when it's at or below zero, but `zero_degrees_is_frost` is failing. Could you fix the code so the test passes?"
+hurried = "frost alert test red, pls fix code"
+
+[check]
+test = true

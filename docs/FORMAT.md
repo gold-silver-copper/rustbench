@@ -30,6 +30,7 @@ build = true                  # `cargo build` must succeed (default true)
 test = true                   # `cargo test` must pass (default: true if the crate has tests after `hidden/` is applied)
 stdout = "6\n"                # optional: `cargo run` must print exactly this
 timeout_secs = 120            # per check command (default 120)
+max_shrink = 0.2              # optional: fail if the agent removed more than 20% of the Rust code
 ```
 
 Every prompt style is a full request a person might send. Styles a task

@@ -1,0 +1,15 @@
+id = "word-score-value"
+suite = "talk"
+kind = "explain"
+split = "dev"
+difficulty = 2
+summary = "evaluate word_score(\"Quiz\") by hand: letter values, capital doubling, length bonus"
+
+[prompt]
+terse = "What does `word_score(\"Quiz\")` return? Write just the number to a file ANSWER in the crate root."
+chatty = "Hi there, I'm writing the rules page for my word game and want to use \"Quiz\" as the example. What does `word_score(\"Quiz\")` return? Please write only the number into a file named ANSWER in the crate root, and leave the code as it is."
+hurried = "what does word_score(\"Quiz\") give? number only in ANSWER at crate root"
+
+[check]
+build = true
+answer = "44"

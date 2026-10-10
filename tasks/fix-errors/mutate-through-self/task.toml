@@ -1,0 +1,14 @@
+id = "mutate-through-self"
+suite = "fix-errors"
+kind = "fix-error"
+split = "dev"
+difficulty = 1
+summary = "a method that changes a field takes &self"
+
+[prompt]
+terse = "fix build"
+chatty = "Hello! My visit counter doesn't compile and the error mentions a `&` reference. Could you get it working? It should print the third visit."
+hurried = "visit() wont compile fix"
+
+[check]
+stdout = "home: 3\n"

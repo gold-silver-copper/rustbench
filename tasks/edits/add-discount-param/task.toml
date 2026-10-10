@@ -1,0 +1,11 @@
+id = "add-discount-param"
+suite = "edits"
+kind = "edit"
+split = "dev"
+difficulty = 2
+summary = "cart::total gains a discount_percent parameter; existing callers pass 0"
+
+[prompt]
+terse = "Add a second parameter `discount_percent: u8` to `cart::total`, so it becomes `total(items: &[LineItem], discount_percent: u8) -> u64`. Take that percentage off the summed total, in integer cents, rounding down. Update every existing caller to pass 0."
+chatty = "Hello! We're starting to run promotions, so `cart::total` needs to know about discounts. Could you give it a second parameter, `discount_percent: u8`, and subtract that percentage from the whole total? Everything is in integer cents, so just round the result down (e.g. 999 cents with 10% off is 899). All the places that call `total` today shouldn't change behaviour, so have them pass 0."
+hurried = "cart::total needs 2nd arg discount_percent: u8, take that % off the total (cents, round down). existing calls just pass 0"

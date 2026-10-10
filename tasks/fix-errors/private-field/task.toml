@@ -1,0 +1,11 @@
+id = "private-field"
+suite = "fix-errors"
+kind = "fix-error"
+split = "dev"
+difficulty = 2
+summary = "a private field is read from outside its module"
+
+[prompt]
+terse = "fix the build"
+chatty = "Hey! I added a statement function for bank accounts but it won't compile, something about a private field. Can you fix it? The output format is what I want."
+hurried = "statement() private field error, fix"

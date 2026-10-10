@@ -1,0 +1,11 @@
+id = "digit-sum"
+suite = "implement"
+kind = "implement"
+split = "heldout"
+difficulty = 1
+summary = "sum of the decimal digits of a u64"
+
+[prompt]
+terse = "implement `digit_sum`"
+chatty = "Hi! Could you fill in `digit_sum` in src/lib.rs? It's still a `todo!()`; the doc comment says what it should return."
+hurried = "digit_sum needs a body pls"

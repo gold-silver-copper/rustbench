@@ -1,0 +1,11 @@
+id = "window-sums"
+suite = "implement"
+kind = "implement"
+split = "dev"
+difficulty = 2
+summary = "sums of complete fixed-size windows at a given step"
+
+[prompt]
+terse = "implement `window_sums`"
+chatty = "Hi! I need `window_sums` in src/lib.rs implemented. The doc comment explains which windows are included and when it should return None."
+hurried = "implement window_sums, doc has the edge cases"

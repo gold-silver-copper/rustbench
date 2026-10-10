@@ -1,0 +1,14 @@
+id = "docs-breadcrumbs"
+suite = "fix-tests"
+kind = "fix-test"
+split = "heldout"
+difficulty = 2
+summary = "wrong iteration order: the breadcrumb trail is built leaf-first and never reversed"
+
+[prompt]
+terse = "breadcrumb test fails"
+chatty = "Hi! Breadcrumbs on our docs site read \"Install > Guides > Home\", and `trail_from_home_down` fails. Could you fix the trail code?"
+hurried = "breadcrumbs wrong way round, test failing fix"
+
+[check]
+test = true

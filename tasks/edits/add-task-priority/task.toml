@@ -1,0 +1,11 @@
+id = "add-task-priority"
+suite = "edits"
+kind = "edit"
+split = "dev"
+difficulty = 2
+summary = "add a `priority: u8` field to `Task`, default 3 in `Task::new` and in every struct literal"
+
+[prompt]
+terse = "Add `pub priority: u8` to `Task`. `Task::new` sets it to 3; every other place that builds a Task uses 3 too."
+chatty = "Hey, I'd like the todo list to know about priorities. Could you add a public `priority: u8` field to `Task`? `Task::new` should give new tasks priority 3, which is our 'normal' level, and anywhere else a Task is built directly (the templates, main, tests) should also just use 3 for now."
+hurried = "need a priority field on Task (pub, u8). default 3 in Task::new and use 3 for all the other Task { .. } literals"

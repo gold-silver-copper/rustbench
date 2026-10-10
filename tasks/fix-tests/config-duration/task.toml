@@ -1,0 +1,14 @@
+id = "config-duration"
+suite = "fix-tests"
+kind = "fix-test"
+split = "dev"
+difficulty = 2
+summary = "wrong operator: each unit of a duration overwrites the total instead of adding to it"
+
+[prompt]
+terse = "duration parse test fails, fix"
+chatty = "Hi! We parse timeouts like \"1h30m\" from a config file and `hours_and_minutes_add_up` is failing. Single units like \"45s\" seem fine. Could you fix the parser so the test passes?"
+hurried = "1h30m parses wrong test red pls fix"
+
+[check]
+test = true

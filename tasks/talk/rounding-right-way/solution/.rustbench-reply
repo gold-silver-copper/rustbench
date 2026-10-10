@@ -1,0 +1,5 @@
+What should "the right way" be? Right now each line's tax is rounded half away from zero (0.5 cent goes up), and the rounded lines are then summed. Common alternatives are:
+- round half to even (banker's rounding),
+- always round down (truncate) or always up,
+- sum the unrounded line taxes and round once per invoice.
+Which rule does your accountant want, ideally with an example invoice and the expected total?

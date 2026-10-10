@@ -1,0 +1,14 @@
+id = "undo-menu"
+suite = "fix-tests"
+kind = "fix-test"
+split = "dev"
+difficulty = 1
+summary = "wrong iteration order: the undo menu lists the oldest actions instead of the newest"
+
+[prompt]
+terse = "undo menu test failing"
+chatty = "Hi! In my drawing app the Undo menu should show the most recent actions first, but `recent_lists_newest_first` fails. Could you fix the history code?"
+hurried = "undo list shows wrong stuff, test fails fix"
+
+[check]
+test = true

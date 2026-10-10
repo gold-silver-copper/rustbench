@@ -1,0 +1,11 @@
+id = "method-inventory-value"
+suite = "edits"
+kind = "edit"
+split = "heldout"
+difficulty = 2
+summary = "add a total_value method to an inventory"
+
+[prompt]
+terse = "Add `pub fn total_value(&self) -> u64` to `Inventory`: the sum over items of `unit_price_cents * quantity`, in cents."
+chatty = "Hello! For the shop's stock report I need to know what everything on the shelves is worth. Could you add a method `pub fn total_value(&self) -> u64` to `Inventory` that adds up `unit_price_cents * quantity` for every item? It should be in cents, like the prices. An empty inventory is worth 0."
+hurried = "add Inventory::total_value(&self) -> u64, sum of unit_price_cents * quantity over all items, in cents"

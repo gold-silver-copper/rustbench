@@ -1,0 +1,14 @@
+id = "leap-year"
+suite = "fix-tests"
+kind = "fix-test"
+split = "dev"
+difficulty = 1
+summary = "wrong operator: the leap year rule uses && where it needs ||"
+
+[prompt]
+terse = "february test is failing, fix"
+chatty = "Hi! Our booking calendar thinks February 2024 has 28 days, and `february_2024_has_29_days` fails because of it. Could you fix the date code?"
+hurried = "calendar test fails feb wrong, fix"
+
+[check]
+test = true

@@ -1,0 +1,15 @@
+id = "collatz-output"
+suite = "talk"
+kind = "explain"
+split = "dev"
+difficulty = 2
+summary = "what the binary prints: Collatz step count of 27"
+
+[prompt]
+terse = "What does `cargo run` print? Write just that number to a file ANSWER in the crate root."
+chatty = "Hi! My kid wrote this little Collatz program and asked me what it prints, and I'd like to check. What does `cargo run` print? Please write only the number it prints into a file named ANSWER at the crate root."
+hurried = "what number does this print when run? put just the number in ANSWER at crate root"
+
+[check]
+build = true
+answer = "111"

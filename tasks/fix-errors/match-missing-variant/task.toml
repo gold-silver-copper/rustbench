@@ -1,0 +1,11 @@
+id = "match-missing-variant"
+suite = "fix-errors"
+kind = "fix-error"
+split = "dev"
+difficulty = 2
+summary = "a match does not cover a newly added enum variant"
+
+[prompt]
+terse = "fix the build"
+chatty = "Hey! We just added in-store pickup as a shipping option and now the fee function won't compile. Pickup is free. Could you fix it?"
+hurried = "added Pickup variant now build fails, its free btw"

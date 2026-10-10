@@ -1,0 +1,14 @@
+id = "room-bookings-merge"
+suite = "fix-tests"
+kind = "fix-test"
+split = "dev"
+difficulty = 3
+summary = "sorting mistake: bookings are sorted by end time before merging overlaps"
+
+[prompt]
+terse = "merge test fails"
+chatty = "Hi! I'm merging meeting room bookings into busy blocks for a calendar view, and `long_booking_swallows_short_one` fails: the merged block starts too late. Could you fix the merge?"
+hurried = "busy blocks wrong start time, test failing fix"
+
+[check]
+test = true

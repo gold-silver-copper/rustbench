@@ -1,0 +1,11 @@
+id = "roman-numerals"
+suite = "implement"
+kind = "implement"
+split = "dev"
+difficulty = 3
+summary = "to/from standard-form Roman numerals, rejecting non-canonical input"
+
+[prompt]
+terse = "implement `to_roman` and `from_roman`"
+chatty = "Hi! Could you implement `to_roman` and `from_roman` in src/lib.rs? The doc comments define the standard form, the range, and what `from_roman` must reject."
+hurried = "to_roman + from_roman both todo!(), implement them. from_roman must reject non standard stuff"

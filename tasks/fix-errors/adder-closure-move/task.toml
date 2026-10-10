@@ -1,0 +1,11 @@
+id = "adder-closure-move"
+suite = "fix-errors"
+kind = "fix-error"
+split = "heldout"
+difficulty = 2
+summary = "a returned closure borrows a local instead of capturing it by value"
+
+[prompt]
+terse = "fix build"
+chatty = "Hi! I'm making a function that returns a tax-adding function for a given percentage. The compiler says the closure may outlive the current function. Could you fix it?"
+hurried = "closure may outlive fn error fix"

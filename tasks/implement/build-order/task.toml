@@ -1,0 +1,11 @@
+id = "build-order"
+suite = "implement"
+kind = "implement"
+split = "heldout"
+difficulty = 4
+summary = "dependency ordering with alphabetical tie-break and cycle reporting"
+
+[prompt]
+terse = "implement `build_order`"
+chatty = "Hi! Could you implement `build_order` in src/lib.rs? It orders tasks so dependencies come first. The doc comment says how ties are broken and what to return when there's a cycle."
+hurried = "build_order todo!() -> implement. ties alphabetical, Err w/ leftover tasks on cycle. see doc"

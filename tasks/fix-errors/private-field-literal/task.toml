@@ -1,0 +1,11 @@
+id = "private-field-literal"
+suite = "fix-errors"
+kind = "fix-error"
+split = "heldout"
+difficulty = 3
+summary = "a struct with private fields is built with a struct literal from the parent module"
+
+[prompt]
+terse = "fix the build"
+chatty = "Hi! I moved the wallet type into its own file and now `starter_wallet` in lib.rs doesn't compile, it talks about private fields. New players start with 100 coins. Can you fix it?"
+hurried = "private field error after moving wallet to own file, fix"

@@ -1,0 +1,11 @@
+id = "longest-word"
+suite = "implement"
+kind = "implement"
+split = "heldout"
+difficulty = 1
+summary = "first longest whitespace-separated word, measured in chars"
+
+[prompt]
+terse = "implement `longest_word`"
+chatty = "Hello! `longest_word` in src/lib.rs is unfinished. Could you implement it? The doc comment says how ties and empty text are handled."
+hurried = "implement longest_word (ties -> first one)"

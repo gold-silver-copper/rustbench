@@ -1,0 +1,11 @@
+id = "index-with-i32"
+suite = "fix-errors"
+kind = "fix-error"
+split = "dev"
+difficulty = 1
+summary = "a slice is indexed with an i32"
+
+[prompt]
+terse = "fix compile error"
+chatty = "Hi! The leaderboard lookup won't build, something about indexing. Could you fix it so it compiles? Ranks are 1-based, and that part works the way I want."
+hurried = "index error in player_at_rank, fix"

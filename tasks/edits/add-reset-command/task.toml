@@ -1,0 +1,11 @@
+id = "add-reset-command"
+suite = "edits"
+kind = "edit"
+split = "dev"
+difficulty = 3
+summary = "add Command::Reset, parsed from \"reset\", which sets the counter to 0"
+
+[prompt]
+terse = "Add a `Command::Reset` variant: `parse` should recognise the word \"reset\", and applying it sets the counter back to 0. Handle it everywhere `Command` is matched."
+chatty = "Hey! The counter REPL needs a way to start over. Could you add a `Reset` variant to `Command`? Typing `reset` should parse to it (same rules as the other words: surrounding spaces are fine, nothing after it), and running it should put the counter back to 0. Please make sure every place that matches on `Command` knows about it, including the echo text in exec.rs, where it should say \"reset\"."
+hurried = "add Command::Reset, word is \"reset\", sets counter to 0. update parse + exec + whatever else matches on Command"

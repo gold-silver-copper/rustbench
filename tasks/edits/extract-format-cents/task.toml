@@ -1,0 +1,11 @@
+id = "extract-format-cents"
+suite = "edits"
+kind = "edit"
+split = "dev"
+difficulty = 2
+summary = "extract the cents formatting duplicated in invoice.rs and receipt.rs into money::format_cents"
+
+[prompt]
+terse = "invoice.rs and receipt.rs both format cents as dollars by hand. Move that into a new module src/money.rs with `pub fn format_cents(cents: i64) -> String` (reachable as `task::money::format_cents`) and use it in both places. Output must not change (\"$12.05\", \"-$3.40\")."
+chatty = "Hey! I keep finding the same \"turn cents into a dollar string\" code in both invoice.rs and receipt.rs. Could you pull it out into a new `money` module (src/money.rs) with a public `format_cents(cents: i64) -> String`, so it's `task::money::format_cents`, and have the invoice and the receipt both call it? It should format exactly like today: 1205 becomes \"$12.05\" and -340 becomes \"-$3.40\"."
+hurried = "the cents->\"$12.05\" formatting is copy pasted in invoice.rs and receipt.rs. new mod money (src/money.rs) w/ pub fn format_cents(cents: i64) -> String, use it in both. negatives stay \"-$3.40\""

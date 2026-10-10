@@ -1,0 +1,11 @@
+id = "parse-needs-type"
+suite = "fix-errors"
+kind = "fix-error"
+split = "heldout"
+difficulty = 1
+summary = "parse() result has no type annotation"
+
+[prompt]
+terse = "fix the error"
+chatty = "Hello! Tiny helper that doubles a quantity the user typed. It says type annotations needed. Quantities are whole numbers of items, never negative. Can you fix it?"
+hurried = "type annotations needed on parse fix pls"

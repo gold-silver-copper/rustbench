@@ -1,0 +1,15 @@
+id = "remove-old-function"
+suite = "talk"
+kind = "ask"
+split = "dev"
+difficulty = 2
+summary = "\"remove the old function\" with two #[deprecated] functions in the crate"
+
+[prompt]
+terse = "remove the old function"
+chatty = "Hi! We finally migrated everything, so could you remove the old function from this crate? It's just been sitting there."
+hurried = "pls delete the old fn, not used anymore"
+
+[check]
+build = true
+expect_refusal = true

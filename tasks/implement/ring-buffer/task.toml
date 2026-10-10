@@ -1,0 +1,11 @@
+id = "ring-buffer"
+suite = "implement"
+kind = "implement"
+split = "heldout"
+difficulty = 2
+summary = "a fixed-capacity FIFO that overwrites its oldest value when full"
+
+[prompt]
+terse = "implement `RingBuffer`"
+chatty = "Hello! I need the `RingBuffer` type in src/lib.rs finished: the struct has no fields yet and all the methods are `todo!()`. The doc comments say what each method returns, including the capacity-0 case."
+hurried = "RingBuffer is all todo!(), implement it (fields up to u). see doc comments"

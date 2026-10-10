@@ -1,0 +1,11 @@
+id = "rename-done-variant"
+suite = "edits"
+kind = "edit"
+split = "dev"
+difficulty = 2
+summary = "rename enum variant `OrderStatus::Done` to `OrderStatus::Delivered` in every match"
+
+[prompt]
+terse = "Rename the variant `OrderStatus::Done` to `OrderStatus::Delivered` everywhere."
+chatty = "Hi! Our support team finds `OrderStatus::Done` confusing, since an order can be 'done' on our side long before the customer has it. Could you rename that variant to `Delivered`? It's matched and constructed in a handful of places across the crate, so please update all of them. Labels and behaviour stay as they are."
+hurried = "rename OrderStatus::Done to Delivered, all matches/uses"

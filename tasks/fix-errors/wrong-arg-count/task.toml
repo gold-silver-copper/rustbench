@@ -1,0 +1,11 @@
+id = "wrong-arg-count"
+suite = "fix-errors"
+kind = "fix-error"
+split = "dev"
+difficulty = 1
+summary = "a function is called with one argument too few"
+
+[prompt]
+terse = "fix the build error"
+chatty = "Hey, I added shipping to the price calculation and now the cart total doesn't compile. Could you take a look and fix it?"
+hurried = "cart_total broke after i added shipping, pls fix"

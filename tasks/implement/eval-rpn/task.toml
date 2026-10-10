@@ -1,0 +1,11 @@
+id = "eval-rpn"
+suite = "implement"
+kind = "implement"
+split = "heldout"
+difficulty = 4
+summary = "evaluate reverse Polish i64 expressions with checked arithmetic and indexed errors"
+
+[prompt]
+terse = "implement `eval_rpn`"
+chatty = "Hello! Could you implement `eval_rpn` in src/lib.rs? It evaluates reverse Polish notation over i64. The doc comments on it and on `RpnError` say how tokens are read, how `/` and `%` behave, and which error to return with which index."
+hurried = "eval_rpn = todo!(), implement. error variants + token indexes described in the doc"

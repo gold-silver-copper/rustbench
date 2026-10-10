@@ -1,0 +1,11 @@
+id = "borrow-while-pushing"
+suite = "fix-errors"
+kind = "fix-error"
+split = "dev"
+difficulty = 2
+summary = "a reference into a Vec is held across a push"
+
+[prompt]
+terse = "make it compile"
+chatty = "Hi, I have a little sensor log that compares each new reading with the first one. The borrow checker is unhappy with it. Could you fix it so it builds and behaves the same?"
+hurried = "borrow checker error in add_reading pls fix"

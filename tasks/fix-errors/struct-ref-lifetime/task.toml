@@ -1,0 +1,11 @@
+id = "struct-ref-lifetime"
+suite = "fix-errors"
+kind = "fix-error"
+split = "heldout"
+difficulty = 2
+summary = "a struct holding &str fields has no lifetime parameter"
+
+[prompt]
+terse = "fix compile error"
+chatty = "Hello! I'm splitting log lines into level and message without copying the text. The struct definition won't compile, missing lifetime specifier. Can you fix it?"
+hurried = "missing lifetime specifier on LogLine fix pls"

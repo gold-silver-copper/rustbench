@@ -1,0 +1,11 @@
+id = "derive-partialeq"
+suite = "fix-errors"
+kind = "fix-error"
+split = "dev"
+difficulty = 1
+summary = "an enum is compared with == but has no PartialEq"
+
+[prompt]
+terse = "fix compile"
+chatty = "Hi! Little traffic light simulation here, the `can_go` check won't compile. Can you sort it out?"
+hurried = "== on Light doesnt work fix"

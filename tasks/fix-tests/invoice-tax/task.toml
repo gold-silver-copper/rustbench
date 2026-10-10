@@ -1,0 +1,14 @@
+id = "invoice-tax"
+suite = "fix-tests"
+kind = "fix-test"
+split = "dev"
+difficulty = 1
+summary = "wrong operator: tax is subtracted from the invoice total instead of added"
+
+[prompt]
+terse = "invoice total test failing"
+chatty = "Hi! I'm writing invoicing for a small print shop and `total_includes_tax` fails: the customer seems to get a discount instead of paying tax. Could you fix the code?"
+hurried = "invoice totals wrong, test fails fix pls"
+
+[check]
+test = true

@@ -1,0 +1,15 @@
+id = "update-tax-rate"
+suite = "talk"
+kind = "ask"
+split = "heldout"
+difficulty = 2
+summary = "\"update the tax rate\" with two rates and no new value given"
+
+[prompt]
+terse = "update the tax rate"
+chatty = "Hi! The tax rate changed this month, could you update it in the code?"
+hurried = "tax rate changed, update it"
+
+[check]
+build = true
+expect_refusal = true

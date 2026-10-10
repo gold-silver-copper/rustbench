@@ -1,0 +1,11 @@
+id = "generic-render-writer"
+suite = "edits"
+kind = "edit"
+split = "heldout"
+difficulty = 3
+summary = "make a table renderer generic over std::fmt::Write and return fmt::Result"
+
+[prompt]
+terse = "Make `render_table` generic over any `std::fmt::Write` instead of only `String`: `pub fn render_table<W: std::fmt::Write>(out: &mut W, rows: &[Row]) -> std::fmt::Result`. Return write errors instead of ignoring them. Update callers; output must not change."
+chatty = "Hi! `render_table` in src/table.rs only writes into a `String`, but I'd like to render straight into other `std::fmt::Write` sinks too (a Formatter in a Display impl, a byte-counting writer, that kind of thing). Could you change it to `pub fn render_table<W: std::fmt::Write>(out: &mut W, rows: &[Row]) -> std::fmt::Result`, so it passes write errors back up instead of swallowing them, and fix up the callers? The rendered text should stay exactly the same."
+hurried = "render_table should take any fmt::Write not just String. sig: pub fn render_table<W: std::fmt::Write>(out: &mut W, rows: &[Row]) -> std::fmt::Result, return the errors dont ignore them. fix callers, same output"

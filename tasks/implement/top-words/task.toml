@@ -1,0 +1,11 @@
+id = "top-words"
+suite = "implement"
+kind = "implement"
+split = "dev"
+difficulty = 3
+summary = "top-k word frequencies with alphabetical tie-break"
+
+[prompt]
+terse = "implement `top_words`"
+chatty = "Hi! Could you implement `top_words` in src/lib.rs? It should count word frequencies and return the top k; the doc comment defines what a word is and how ties are ordered."
+hurried = "top_words todo, implement per doc (ties alphabetical)"

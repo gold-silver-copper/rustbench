@@ -1,0 +1,11 @@
+id = "merge-sorted-unique"
+suite = "implement"
+kind = "implement"
+split = "dev"
+difficulty = 2
+summary = "merge two sorted slices into one strictly ascending vector without duplicates"
+
+[prompt]
+terse = "implement `merge_sorted_unique`"
+chatty = "Hi! `merge_sorted_unique` in src/lib.rs needs a body. It should merge two already-sorted slices as its doc comment describes, dropping duplicates."
+hurried = "implement merge_sorted_unique pls"

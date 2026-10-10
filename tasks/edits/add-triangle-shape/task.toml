@@ -1,0 +1,11 @@
+id = "add-triangle-shape"
+suite = "edits"
+kind = "edit"
+split = "dev"
+difficulty = 3
+summary = "add Shape::Triangle { a, b, c } and handle it in every match (area via Heron's formula)"
+
+[prompt]
+terse = "Add a `Shape::Triangle { a: f64, b: f64, c: f64 }` variant (the three side lengths) and handle it everywhere `Shape` is matched. Area uses Heron's formula, perimeter is a + b + c, `name()` is \"triangle\"."
+chatty = "Hi! Our little shapes library only knows circles and rectangles, and I need triangles too. Could you add a `Triangle { a: f64, b: f64, c: f64 }` variant to `Shape`, where a, b and c are the side lengths? It needs to work everywhere a shape does: area (Heron's formula: s = (a+b+c)/2, area = sqrt(s(s-a)(s-b)(s-c))), perimeter (just the three sides added up), and the name, which should be \"triangle\"."
+hurried = "add Triangle {a, b, c} (f64 side lengths) to Shape enum + handle in all the matches. area = herons formula, perimeter = a+b+c, name \"triangle\""

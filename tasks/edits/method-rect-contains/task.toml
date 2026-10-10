@@ -1,0 +1,11 @@
+id = "method-rect-contains"
+suite = "edits"
+kind = "edit"
+split = "dev"
+difficulty = 2
+summary = "add `Rect::contains` with inclusive edges"
+
+[prompt]
+terse = "Add `pub fn contains(&self, p: Point) -> bool` to `Rect`. Edges count as inside: x in origin.x..=origin.x + width and y in origin.y..=origin.y + height."
+chatty = "I need a hit test for my rectangles. Can you add `Rect::contains(&self, p: Point) -> bool`? A point on the border should count as inside, so x has to be between origin.x and origin.x + width (both inclusive), and the same for y with height. Watch out, width/height are u32 and coordinates are i32."
+hurried = "add Rect::contains(&self, p: Point) -> bool. edges inclusive, x from origin.x to origin.x+width incl, same for y w/ height"

@@ -1,0 +1,11 @@
+id = "move-out-of-borrow"
+suite = "fix-errors"
+kind = "fix-error"
+split = "dev"
+difficulty = 2
+summary = "a match moves a String out of a field behind &self"
+
+[prompt]
+terse = "fix"
+chatty = "Hi! Contact book: `address` should give the email if there is one, otherwise a note saying there's none. It won't compile, something about moving out of `self`. Can you fix it?"
+hurried = "cannot move out of self.email fix pls"

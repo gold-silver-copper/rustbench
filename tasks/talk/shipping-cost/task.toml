@@ -1,0 +1,15 @@
+id = "shipping-cost"
+suite = "talk"
+kind = "explain"
+split = "dev"
+difficulty = 2
+summary = "evaluate a tiered shipping cost with a rounded-up per-kilo surcharge and express markup"
+
+[prompt]
+terse = "What does `shipping_cost_cents(3200, true)` return? Write just the number to a file ANSWER in the crate root."
+chatty = "Hello! A customer is asking what express shipping costs for a 3.2 kg parcel. What does `shipping_cost_cents(3200, true)` return? Please write only the number (in cents, digits only) into a file named ANSWER at the crate root."
+hurried = "what does shipping_cost_cents(3200, true) return? just the number in ANSWER at crate root"
+
+[check]
+build = true
+answer = "1950"

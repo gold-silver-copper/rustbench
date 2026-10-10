@@ -1,0 +1,17 @@
+id = "e0637"
+suite = "rustc-error-index"
+kind = "fix-error"
+split = "heldout"
+difficulty = 3
+summary = "`'_` lifetime name or `&T` without an explicit lifetime name has been used in an illegal place."
+source = "rust-lang/rust@6e4cba3380a6f9e1e4d7672e11e40372bf04e873 compiler/rustc_error_codes/src/error_codes/E0637.md"
+license = "MIT OR Apache-2.0"
+
+[prompt]
+terse = "fix the compile error"
+chatty = "Hello! I wrote this small Rust crate but the compiler rejects it. Would you mind fixing it so it compiles, without changing what it does?"
+hurried = "build broken, fix it but dont change what it does"
+
+[check]
+max_shrink = 0.25
+build = true

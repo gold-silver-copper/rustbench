@@ -1,0 +1,11 @@
+id = "shadowed-to-string"
+suite = "fix-errors"
+kind = "fix-error"
+split = "dev"
+difficulty = 2
+summary = "a number is shadowed by a String and then used in arithmetic"
+
+[prompt]
+terse = "fix build"
+chatty = "Hi! I tweaked the basket summary to say \"cents total\" and now it doesn't compile, something about dividing a String. Can you fix it without changing the output text?"
+hurried = "summary() broke cant divide string?? fix"

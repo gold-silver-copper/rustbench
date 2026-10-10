@@ -1,0 +1,11 @@
+id = "str-to-string-field"
+suite = "fix-errors"
+kind = "fix-error"
+split = "dev"
+difficulty = 1
+summary = "a string literal is stored in a String field"
+
+[prompt]
+terse = "fix"
+chatty = "Hey, quick one: my ticket tracker stopped compiling when I added a status field. Can you get it building again?"
+hurried = "mismatched types in Ticket::new fix pls"

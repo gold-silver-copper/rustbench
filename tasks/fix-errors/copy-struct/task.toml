@@ -1,0 +1,11 @@
+id = "copy-struct"
+suite = "fix-errors"
+kind = "fix-error"
+split = "dev"
+difficulty = 2
+summary = "a small struct is used after being moved because it isn't Copy"
+
+[prompt]
+terse = "fix the build"
+chatty = "Hi! Geometry helper for a school project: the triangle perimeter function won't compile, it says the points were moved. Can you fix it?"
+hurried = "use of moved value Point, perimeter fn, fix"

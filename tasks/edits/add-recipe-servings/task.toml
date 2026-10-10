@@ -1,0 +1,11 @@
+id = "add-recipe-servings"
+suite = "edits"
+kind = "edit"
+split = "heldout"
+difficulty = 2
+summary = "add a `servings` field to `Recipe`, defaulting to 1 everywhere it is built"
+
+[prompt]
+terse = "Add a public field `servings: u32` to `Recipe`. `Recipe::new` sets it to 1, and every other place that builds a `Recipe` (seed data, main.rs) uses 1 as well."
+chatty = "I want my recipes to remember how many people they feed. Could you add a `pub servings: u32` field to `Recipe`? For now everything should default to 1 serving: `Recipe::new` should set 1, and the recipes built by hand in the seed data and in main.rs should get `servings: 1` too. Nothing else should change."
+hurried = "add pub servings: u32 to Recipe, default 1 (Recipe::new + all the struct literals in seed/main)"

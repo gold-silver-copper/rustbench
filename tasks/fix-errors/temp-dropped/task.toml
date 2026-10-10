@@ -1,0 +1,11 @@
+id = "temp-dropped"
+suite = "fix-errors"
+kind = "fix-error"
+split = "dev"
+difficulty = 2
+summary = "slices borrow from a temporary String that is dropped at the end of the statement"
+
+[prompt]
+terse = "make it compile"
+chatty = "Hey! I parse CSV-ish lines into lowercase fields. The compiler says a temporary value is dropped while borrowed, which I don't really understand. Could you fix it?"
+hurried = "temporary value dropped while borrowed, fix it"
