@@ -1,0 +1,11 @@
+id = "wrap-text"
+suite = "implement"
+kind = "implement"
+split = "dev"
+difficulty = 3
+summary = "greedy word wrap that never splits long words"
+
+[prompt]
+terse = "implement `wrap_text`"
+chatty = "Hi! `wrap_text` in src/lib.rs is still a `todo!()`. Could you implement it? It's a greedy word wrapper; the doc comment covers long words, spacing and the empty case."
+hurried = "wrap_text needs implementing (greedy wrap, see doc)"

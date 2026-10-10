@@ -1,0 +1,11 @@
+id = "const-overflow"
+suite = "fix-errors"
+kind = "fix-error"
+split = "dev"
+difficulty = 1
+summary = "a constant's arithmetic overflows its declared type"
+
+[prompt]
+terse = "fix the error"
+chatty = "Hi! I added a constant for milliseconds per day and the build broke. Could you get it compiling again?"
+hurried = "const overflow error MS_PER_DAY fix"

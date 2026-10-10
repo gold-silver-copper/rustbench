@@ -1,0 +1,15 @@
+id = "rename-it"
+suite = "talk"
+kind = "ask"
+split = "dev"
+difficulty = 2
+summary = "\"rename it to total\": both the Cart::amount field and cart_value() are candidates"
+
+[prompt]
+terse = "rename it to total"
+chatty = "Hey, the naming in the cart code is bugging me. Can you rename it to `total`? Thanks!"
+hurried = "rename it to total pls"
+
+[check]
+build = true
+expect_refusal = true

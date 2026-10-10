@@ -1,0 +1,11 @@
+id = "derive-hash"
+suite = "fix-errors"
+kind = "fix-error"
+split = "dev"
+difficulty = 2
+summary = "a struct is used as a HashMap key without Hash"
+
+[prompt]
+terse = "fix the error"
+chatty = "Hello! I'm counting hits on a battleship-style grid and the HashMap code won't compile. Could you make it build without changing how it counts?"
+hurried = "hashmap entry error on Cell, fix pls"

@@ -1,0 +1,11 @@
+id = "tick-tock"
+suite = "implement"
+kind = "implement"
+split = "dev"
+difficulty = 1
+summary = "FizzBuzz-like sequence with an extra rule for numbers containing a 7"
+
+[prompt]
+terse = "implement `tick_tock`"
+chatty = "Hello! Could you implement `tick_tock` in src/lib.rs? It's a little counting game; the doc comment has all the rules, including the one about sevens."
+hurried = "implement tick_tock, rules r in the doc comment"

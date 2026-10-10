@@ -1,0 +1,11 @@
+id = "const-max-retries"
+suite = "edits"
+kind = "edit"
+split = "dev"
+difficulty = 1
+summary = "replace the magic retry count 3 with a named constant"
+
+[prompt]
+terse = "Replace the hard-coded retry count `3` with `pub const MAX_RETRIES: u32 = 3;` defined in src/lib.rs (crate root), and use it everywhere the 3 means the retry limit."
+chatty = "The number 3 for how many times we retry a request is sprinkled around the fetch code, and I keep worrying someone will change one and not the others. Can you pull it out into a public constant `MAX_RETRIES: u32 = 3` at the crate root (in lib.rs) and use that instead? Behaviour shouldn't change."
+hurried = "the retry count 3 is hardcoded in a few places, make it pub const MAX_RETRIES: u32 = 3 in lib.rs and use it evrywhere"

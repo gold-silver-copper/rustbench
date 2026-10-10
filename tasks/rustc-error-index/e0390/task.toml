@@ -1,0 +1,17 @@
+id = "e0390"
+suite = "rustc-error-index"
+kind = "fix-error"
+split = "dev"
+difficulty = 1
+summary = "A method or constant was implemented on a primitive type."
+source = "rust-lang/rust@6e4cba3380a6f9e1e4d7672e11e40372bf04e873 compiler/rustc_error_codes/src/error_codes/E0390.md"
+license = "MIT OR Apache-2.0"
+
+[prompt]
+terse = "make this compile; keep the behavior the same"
+chatty = "Hi! This crate doesn't compile right now. Could you get it building again without changing what the code is meant to do?"
+hurried = "doesnt compile pls fix"
+
+[check]
+max_shrink = 0.25
+build = true

@@ -1,0 +1,14 @@
+id = "sensor-mean-empty"
+suite = "fix-tests"
+kind = "fix-test"
+split = "dev"
+difficulty = 1
+summary = "missing edge case: the mean of no readings is NaN instead of None"
+
+[prompt]
+terse = "fix failing test in stats"
+chatty = "Hi! In our sensor dashboard, `no_readings_no_mean` fails: the mean of an empty list should be None, and right now it isn't. Could you fix the stats code?"
+hurried = "mean test fails on empty, fix it"
+
+[check]
+test = true

@@ -1,0 +1,11 @@
+id = "sum-even"
+suite = "implement"
+kind = "implement"
+split = "dev"
+difficulty = 1
+summary = "sum the even numbers of a slice, negatives included"
+
+[prompt]
+terse = "implement `sum_even`"
+chatty = "Hi! There's a `sum_even` function in src/lib.rs that's still just a `todo!()`. Could you fill it in so it does what its doc comment says?"
+hurried = "sum_even is todo!() still, implement it per the doc comment pls"

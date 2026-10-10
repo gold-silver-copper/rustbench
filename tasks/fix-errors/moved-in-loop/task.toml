@@ -1,0 +1,11 @@
+id = "moved-in-loop"
+suite = "fix-errors"
+kind = "fix-error"
+split = "heldout"
+difficulty = 1
+summary = "a Vec is consumed by a for loop and then used again"
+
+[prompt]
+terse = "fix build"
+chatty = "Hi! I print name badges for an event and also want the count. The loop seems to eat the list or something and it won't compile. Could you fix it?"
+hurried = "value moved in for loop error, fix pls"

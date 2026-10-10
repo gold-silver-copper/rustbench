@@ -1,0 +1,11 @@
+id = "add-book-pages"
+suite = "edits"
+kind = "edit"
+split = "dev"
+difficulty = 2
+summary = "add a `pages: u32` field to `Book` and update every struct literal (0 for existing books)"
+
+[prompt]
+terse = "Add a `pub pages: u32` field to `Book`. Update every place a Book is built; use 0 for the existing books."
+chatty = "Hi! I want to start tracking page counts in the library catalog. Could you add a public field `pages: u32` to the `Book` struct? Books get created with struct literals in a few spots (the seed data, main, the tests), and I don't know the page counts for those yet, so just put 0 for them for now."
+hurried = "add pages: u32 (pub) to Book struct + fix everywhere books get created, just use 0 pages for the existing ones"

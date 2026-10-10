@@ -1,0 +1,11 @@
+id = "question-mark-error-type"
+suite = "fix-errors"
+kind = "fix-error"
+split = "dev"
+difficulty = 2
+summary = "`?` cannot convert ParseIntError into the function's String error type"
+
+[prompt]
+terse = "fix compile error"
+chatty = "Hi! I'm parsing screen sizes like \"640x480\". It should return an error for bad input but the `?`s don't compile. Can you fix it?"
+hurried = "? error conversion thing in parse_size fix pls"

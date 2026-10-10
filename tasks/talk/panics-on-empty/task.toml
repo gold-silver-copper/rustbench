@@ -1,0 +1,15 @@
+id = "panics-on-empty"
+suite = "talk"
+kind = "explain"
+split = "dev"
+difficulty = 2
+summary = "of five stats functions only median panics on an empty slice (mean gives NaN)"
+
+[prompt]
+terse = "Which function panics when given an empty slice? Write just its name to a file ANSWER in the crate root."
+chatty = "Hello! We had a crash in production that we think came from passing an empty list into one of these stats helpers. Which function here panics on an empty slice? Please write only the function name into a file called ANSWER at the crate root. No code changes needed."
+hurried = "which of these fns panics on empty input? name only -> ANSWER file in crate root"
+
+[check]
+build = true
+answer = "median"

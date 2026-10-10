@@ -1,0 +1,11 @@
+id = "return-local-ref"
+suite = "fix-errors"
+kind = "fix-error"
+split = "dev"
+difficulty = 2
+summary = "a method returns a reference to a String created inside it"
+
+[prompt]
+terse = "fix build"
+chatty = "Hello! I added a label method for the shop's shelf tags and now cargo refuses to build. Can you sort it out? The label text itself is right."
+hurried = "label() doesnt compile, returns ref to something? fix pls"

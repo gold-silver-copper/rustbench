@@ -1,0 +1,17 @@
+id = "e0509"
+suite = "rustc-error-index"
+kind = "fix-error"
+split = "heldout"
+difficulty = 1
+summary = "This error occurs when an attempt is made to move out of a value whose type implements the `Drop` trait."
+source = "rust-lang/rust@6e4cba3380a6f9e1e4d7672e11e40372bf04e873 compiler/rustc_error_codes/src/error_codes/E0509.md"
+license = "MIT OR Apache-2.0"
+
+[prompt]
+terse = "fix the compile error"
+chatty = "Hey, I'm stuck on a compiler error in this little crate. Can you fix it so it builds? Please keep the behavior as it is."
+hurried = "compile error, make it build quick"
+
+[check]
+build = true
+stdout = "Fancy: 5\n"

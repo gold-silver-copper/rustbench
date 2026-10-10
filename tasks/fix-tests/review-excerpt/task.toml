@@ -1,0 +1,14 @@
+id = "review-excerpt"
+suite = "fix-tests"
+kind = "fix-test"
+split = "heldout"
+difficulty = 1
+summary = "off-by-one: 1-based line numbers are used as 0-based skips"
+
+[prompt]
+terse = "excerpt test failing, fix"
+chatty = "Hi! For code-review comments we quote line ranges from a file, and `quotes_lines_two_to_three` fails: the quote starts a line too late. Could you fix the library?"
+hurried = "quoted lines are shifted, test fails fix pls"
+
+[check]
+test = true

@@ -1,0 +1,11 @@
+id = "derive-clone-playlist"
+suite = "edits"
+kind = "edit"
+split = "dev"
+difficulty = 1
+summary = "derive Clone on Playlist and Song"
+
+[prompt]
+terse = "Make `Playlist` and `Song` cloneable (derive Clone)."
+chatty = "Hi! I want to duplicate a playlist and then tweak the copy without touching the original, but `Playlist` can't be cloned right now. Could you derive `Clone` for `Playlist` and for `Song` too?"
+hurried = "playlist + song need Clone derive pls, want to copy a playlist"

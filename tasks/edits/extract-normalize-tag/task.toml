@@ -1,0 +1,11 @@
+id = "extract-normalize-tag"
+suite = "edits"
+kind = "edit"
+split = "heldout"
+difficulty = 2
+summary = "extract duplicated tag-cleaning code into a pub normalize_tag function"
+
+[prompt]
+terse = "The tag cleanup (trim, lowercase, spaces to '-', drop anything not ASCII alphanumeric or '-') is duplicated in tags.rs and search.rs. Extract it into `pub fn normalize_tag(raw: &str) -> String` in src/tags.rs and use it in both places."
+chatty = "Hey! I noticed the same tag-cleaning steps are copy-pasted in src/tags.rs and src/search.rs: trim, lowercase, turn spaces into '-', and throw away anything that isn't an ASCII letter, digit or '-'. Could you pull that into one function, `pub fn normalize_tag(raw: &str) -> String`, living in src/tags.rs, and have both places call it? Behaviour should stay exactly the same."
+hurried = "tag cleanup code is duplicated in tags.rs + search.rs, pull it out into pub fn normalize_tag(raw: &str) -> String in tags.rs and use it in both. same behavior"

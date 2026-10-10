@@ -1,0 +1,11 @@
+id = "clamp-all"
+suite = "implement"
+kind = "implement"
+split = "dev"
+difficulty = 1
+summary = "clamp each value into lo..=hi, None when lo > hi"
+
+[prompt]
+terse = "implement `clamp_all`"
+chatty = "Hello! I left `clamp_all` unfinished in src/lib.rs. Could you implement it following its doc comment, including the case where the bounds are backwards?"
+hurried = "fill in clamp_all, doc comment has the rules"

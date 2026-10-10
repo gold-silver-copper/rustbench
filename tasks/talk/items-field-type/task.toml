@@ -1,0 +1,15 @@
+id = "items-field-type"
+suite = "talk"
+kind = "explain"
+split = "dev"
+difficulty = 1
+summary = "the declared type of Order::items"
+
+[prompt]
+terse = "What is the type of the `items` field on `Order`? Write just the type, exactly as written in the source, to a file ANSWER in the crate root."
+chatty = "Hey there! I'm writing a serializer for orders and need to know how line items are stored. What's the type of the `items` field on the `Order` struct? Please write just the type, spelled exactly as it is in the source, into a file named ANSWER at the crate root."
+hurried = "type of Order.items? write the type exactly like in the code into ANSWER at crate root"
+
+[check]
+build = true
+answer = "Vec<LineItem>"

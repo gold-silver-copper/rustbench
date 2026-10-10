@@ -1,0 +1,11 @@
+id = "iter-mut"
+suite = "fix-errors"
+kind = "fix-error"
+split = "dev"
+difficulty = 1
+summary = "elements are modified through iter() instead of iter_mut()"
+
+[prompt]
+terse = "fix"
+chatty = "Hi! I want to curve every exam score by some bonus points, capped at 100. The loop won't compile. Can you sort it out?"
+hurried = "cannot assign to *s error fix pls"

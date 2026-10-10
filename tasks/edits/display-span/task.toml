@@ -1,0 +1,11 @@
+id = "display-span"
+suite = "edits"
+kind = "edit"
+split = "heldout"
+difficulty = 2
+summary = "implement Display for a duration type in an `1h 02m 03s` format"
+
+[prompt]
+terse = "Implement `std::fmt::Display` for `Span` in src/span.rs. Format: `<h>h <mm>m <ss>s`, hours unpadded, minutes and seconds two digits, all three parts always shown. Examples: 3723 secs -> `1h 02m 03s`, 45 secs -> `0h 00m 45s`."
+chatty = "Hey! I keep writing little helpers to print my `Span` durations and I'd rather just have `Display` on it. Could you implement `std::fmt::Display` for `Span`? I'd like it to look like `1h 02m 03s` (that's 3723 seconds): hours without padding, minutes and seconds always two digits, and always show all three parts, so 45 seconds is `0h 00m 45s`. Feel free to use it in the report code if that tidies things up."
+hurried = "need Display for Span. format like 1h 02m 03s (=3723s), hours no padding, mins + secs 2 digits, always all 3 parts so 45s -> 0h 00m 45s"

@@ -1,0 +1,11 @@
+id = "generic-catalog"
+suite = "edits"
+kind = "edit"
+split = "dev"
+difficulty = 2
+summary = "make `catalog` generic over the `Describe` trait instead of taking only books"
+
+[prompt]
+terse = "Make `catalog` in src/catalog.rs generic: `pub fn catalog<T: Describe>(items: &[T]) -> String`, so it works for `Movie` (and anything implementing `Describe`), not just `Book`. Output must stay the same."
+chatty = "Hey! I've got a `Describe` trait that both `Book` and `Movie` implement, but `catalog()` only accepts a slice of books, which is silly. Could you make it generic over any `T: Describe` so I can pass `&[Movie]` too? Same output format as now, one line per item. Thanks!"
+hurried = "catalog() only takes &[Book], make it generic over T: Describe so movies work too. dont change output"

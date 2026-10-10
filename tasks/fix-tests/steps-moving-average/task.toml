@@ -1,0 +1,14 @@
+id = "steps-moving-average"
+suite = "fix-tests"
+kind = "fix-test"
+split = "dev"
+difficulty = 2
+summary = "off-by-one: a moving average drops the last window"
+
+[prompt]
+terse = "make the moving average test pass"
+chatty = "Hello! I'm smoothing step counts for a fitness app and `averages_every_window` fails: one value is missing from the output. I'm fairly sure the test is right. Could you fix the function?"
+hurried = "moving avg test failng fix pls"
+
+[check]
+test = true

@@ -1,0 +1,14 @@
+id = "snack-machine"
+suite = "fix-tests"
+kind = "fix-test"
+split = "dev"
+difficulty = 2
+summary = "state machine: after dispensing, the machine keeps the coin instead of going idle"
+
+[prompt]
+terse = "vending machine test fails"
+chatty = "Hey! Our snack machine simulation hands out free snacks: after one snack it acts like there's still a coin in it. `one_coin_one_snack` fails. Could you fix the state machine?"
+hurried = "vending machine gives free snacks lol, test fails fix"
+
+[check]
+test = true

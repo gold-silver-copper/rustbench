@@ -1,0 +1,11 @@
+id = "add-fog-weather"
+suite = "edits"
+kind = "edit"
+split = "heldout"
+difficulty = 3
+summary = "add a Fog variant to a weather enum and handle it in every match"
+
+[prompt]
+terse = "Add `Weather::Fog`. Station code \"FG\" parses to it, its advice is \"drive carefully\", its icon is \"~\". Handle it everywhere `Weather` is matched."
+chatty = "Hi there! Our weather stations started reporting fog and the app has no idea what to do with it. Could you add a `Fog` variant to the `Weather` enum? The station code for it is \"FG\", the advice we show should be \"drive carefully\", and the icon should be \"~\". Please make sure every place that matches on `Weather` handles it."
+hurried = "add Weather::Fog - code \"FG\", advice \"drive carefully\", icon \"~\". handle it in all the matches"

@@ -1,0 +1,11 @@
+id = "misspelled-field"
+suite = "fix-errors"
+kind = "fix-error"
+split = "dev"
+difficulty = 1
+summary = "a field name is misspelled"
+
+[prompt]
+terse = "fix compile error"
+chatty = "Hi! Shipping volume calculator for parcels, won't build. Could you fix whatever's wrong?"
+hurried = "no field error in volume fn, fix"

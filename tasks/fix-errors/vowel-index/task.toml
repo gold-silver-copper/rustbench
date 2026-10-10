@@ -1,0 +1,11 @@
+id = "vowel-index"
+suite = "fix-errors"
+kind = "fix-error"
+split = "heldout"
+difficulty = 2
+summary = "a &str is indexed by position in a loop"
+
+[prompt]
+terse = "fix compile"
+chatty = "Hey! Word game helper that counts vowels in a word. It won't compile because of how I index the string. Could you fix it?"
+hurried = "string index error in vowels() fix"

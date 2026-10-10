@@ -1,0 +1,11 @@
+id = "string-to-str-arg"
+suite = "fix-errors"
+kind = "fix-error"
+split = "heldout"
+difficulty = 1
+summary = "a String is passed where a &str parameter is expected"
+
+[prompt]
+terse = "fix"
+chatty = "Hey there! Signup validation: keep the usernames that pass the check. It says mismatched types on the call. Could you fix it?"
+hurried = "expected &str found String fix pls"

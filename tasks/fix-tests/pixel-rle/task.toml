@@ -1,0 +1,14 @@
+id = "pixel-rle"
+suite = "fix-tests"
+kind = "fix-test"
+split = "dev"
+difficulty = 2
+summary = "missing edge case: run-length encoding never writes the last run"
+
+[prompt]
+terse = "rle encode test failing, fix"
+chatty = "Hi! I'm writing the save format for a pixel-art editor and `encodes_a_row` fails. Decoding works, but encoded rows lose something. Could you fix the encoder?"
+hurried = "encode drops stuff test fails, fix pls"
+
+[check]
+test = true

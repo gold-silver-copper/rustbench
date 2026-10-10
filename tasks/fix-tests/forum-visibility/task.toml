@@ -1,0 +1,14 @@
+id = "forum-visibility"
+suite = "fix-tests"
+kind = "fix-test"
+split = "heldout"
+difficulty = 1
+summary = "inverted condition: members-only posts are shown to guests and hidden from members"
+
+[prompt]
+terse = "feed test failing"
+chatty = "Hi! On our forum, logged-in members can't see members-only posts but guests can. `member_sees_everything` fails. Could you fix the visibility check?"
+hurried = "members only posts backwards, test fails fix"
+
+[check]
+test = true

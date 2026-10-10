@@ -1,0 +1,14 @@
+id = "cheapest-supplier"
+suite = "fix-tests"
+kind = "fix-test"
+split = "heldout"
+difficulty = 1
+summary = "wrong initial value: the best price starts at 0, so no offer is ever cheaper"
+
+[prompt]
+terse = "cheapest offer test fails"
+chatty = "Hi! Our purchasing tool never finds a cheapest supplier, it always says None. `picks_lowest_price` fails. Could you fix it?"
+hurried = "cheapest always None test failing fix"
+
+[check]
+test = true

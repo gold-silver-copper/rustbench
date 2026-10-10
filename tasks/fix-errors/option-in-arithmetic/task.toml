@@ -1,0 +1,11 @@
+id = "option-in-arithmetic"
+suite = "fix-errors"
+kind = "fix-error"
+split = "dev"
+difficulty = 2
+summary = "an Option from HashMap::get is multiplied as if it were a number"
+
+[prompt]
+terse = "make this compile"
+chatty = "Hi! I'm writing a little price calculator. The cost function should give None for items that aren't in the price list, but it doesn't compile right now. Could you fix it?"
+hurried = "cant multiply option or something. fix cost()"

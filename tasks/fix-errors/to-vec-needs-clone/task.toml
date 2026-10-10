@@ -1,0 +1,11 @@
+id = "to-vec-needs-clone"
+suite = "fix-errors"
+kind = "fix-error"
+split = "heldout"
+difficulty = 3
+summary = "to_vec on a slice of a struct defined in another file that doesn't derive Clone"
+
+[prompt]
+terse = "fix the build"
+chatty = "Hi! Library catalogue: `older_than` should give a sorted copy of the old books and leave the shelf alone. library.rs fails with a trait bound error. Could you fix it?"
+hurried = "to_vec trait bound error in library.rs fix pls"

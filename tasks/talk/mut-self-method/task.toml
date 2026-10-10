@@ -1,0 +1,15 @@
+id = "mut-self-method"
+suite = "talk"
+kind = "explain"
+split = "dev"
+difficulty = 1
+summary = "the one Inventory method taking &mut self (merge is a free function)"
+
+[prompt]
+terse = "Which method of `Inventory` takes `&mut self`? Write just the method name to a file ANSWER in the crate root."
+chatty = "Hi! I'm putting `Inventory` behind a lock and want to know which method needs write access. Which method of `Inventory` takes `&mut self`? Please write only the method name into a file called ANSWER at the crate root."
+hurried = "which Inventory method takes &mut self? name only in ANSWER file (crate root)"
+
+[check]
+build = true
+answer = "restock"

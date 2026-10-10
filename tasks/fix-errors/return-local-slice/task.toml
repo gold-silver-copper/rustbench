@@ -1,0 +1,11 @@
+id = "return-local-slice"
+suite = "fix-errors"
+kind = "fix-error"
+split = "heldout"
+difficulty = 2
+summary = "a function returns a slice of a Vec built inside it"
+
+[prompt]
+terse = "fix the error"
+chatty = "Hello! Grade book helper that keeps the passing scores. The compiler says I'm returning a reference to local data. Could you fix it so it builds?"
+hurried = "returns a value referencing data owned by function?? fix"

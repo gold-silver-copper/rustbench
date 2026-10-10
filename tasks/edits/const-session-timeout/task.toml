@@ -1,0 +1,11 @@
+id = "const-session-timeout"
+suite = "edits"
+kind = "edit"
+split = "heldout"
+difficulty = 1
+summary = "replace a repeated magic number 1800 with a named crate-level constant"
+
+[prompt]
+terse = "Replace the magic number `1800` (session timeout in seconds) with `pub const SESSION_TIMEOUT_SECS: u64 = 1800;` defined in src/lib.rs, and use it everywhere."
+chatty = "Hi! The session timeout of 1800 seconds is hardcoded in a few places across session.rs and auth.rs, and I'm worried someone will change one and miss the others. Could you add a constant `pub const SESSION_TIMEOUT_SECS: u64 = 1800;` at the crate root (src/lib.rs) and use it wherever the 1800 shows up? Nothing should behave differently."
+hurried = "1800 (session timeout secs) is copy pasted all over, make it pub const SESSION_TIMEOUT_SECS: u64 = 1800 in lib.rs and use that everywhere"

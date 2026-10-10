@@ -1,0 +1,15 @@
+id = "bump-the-limit"
+suite = "talk"
+kind = "ask"
+split = "dev"
+difficulty = 2
+summary = "\"bump the limit to 100\" with three different limits in the config"
+
+[prompt]
+terse = "bump the limit to 100"
+chatty = "Hi! Users keep hitting the limit on the upload service. Could you raise the limit to 100?"
+hurried = "set the limit to 100 asap"
+
+[check]
+build = true
+expect_refusal = true

@@ -1,0 +1,1 @@
+What's the new rate, and which one changed? There are two in src/lib.rs: `STANDARD_RATE` (20%) and `REDUCED_RATE` (5%, used for food and books). Tell me the new value(s) and I'll update them.

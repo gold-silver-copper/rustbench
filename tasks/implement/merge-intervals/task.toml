@@ -1,0 +1,11 @@
+id = "merge-intervals"
+suite = "implement"
+kind = "implement"
+split = "dev"
+difficulty = 4
+summary = "merge closed integer intervals, including adjacent ones, across the full i64 range"
+
+[prompt]
+terse = "implement `merge_intervals`"
+chatty = "Hi! Could you implement `merge_intervals` in src/lib.rs? The intervals are closed integer ranges; the doc comment explains that adjacent ones merge too, how invalid input is reported, and that it has to work right up to the i64 limits."
+hurried = "merge_intervals todo!() -> implement. adjacent ones merge, Err(idx) for start>end, full i64 range"

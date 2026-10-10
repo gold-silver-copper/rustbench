@@ -1,0 +1,11 @@
+id = "derive-clone"
+suite = "fix-errors"
+kind = "fix-error"
+split = "dev"
+difficulty = 3
+summary = "a struct without Clone is cloned through a reference in another module, so the error shows up as a type mismatch"
+
+[prompt]
+terse = "this doesn't compile, fix it"
+chatty = "Hey, I'm working on user profiles for a little media player. `muted` should return a copy of the settings with sound off and leave the original alone. The compiler complains about assigning through a reference, which confuses me. Could you fix it?"
+hurried = "profile.rs errors about & reference, idk why, fix pls"

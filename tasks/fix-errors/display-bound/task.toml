@@ -1,0 +1,11 @@
+id = "display-bound"
+suite = "fix-errors"
+kind = "fix-error"
+split = "heldout"
+difficulty = 2
+summary = "a generic function formats T with {} but T has no Display bound"
+
+[prompt]
+terse = "make it compile"
+chatty = "Hey! I want a generic numbered-list renderer for shopping lists and such. The format! line doesn't compile for the generic type. Can you fix it?"
+hurried = "T doesnt implement Display error fix pls"

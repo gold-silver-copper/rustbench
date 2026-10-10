@@ -1,0 +1,14 @@
+id = "caesar-wrap"
+suite = "fix-tests"
+kind = "fix-test"
+split = "dev"
+difficulty = 1
+summary = "off-by-one: a Caesar cipher wraps the alphabet modulo 25"
+
+[prompt]
+terse = "cipher test failing, fix the code"
+chatty = "Hi there, I'm building a little puzzle game with a Caesar cipher and `wraps_past_z` fails. Letters near the end of the alphabet come out wrong. Could you find the bug and fix it without touching the test?"
+hurried = "caesar thing broken near z, test fails. fix"
+
+[check]
+test = true

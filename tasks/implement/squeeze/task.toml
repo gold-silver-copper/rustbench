@@ -1,0 +1,11 @@
+id = "squeeze"
+suite = "implement"
+kind = "implement"
+split = "heldout"
+difficulty = 2
+summary = "collapse runs of repeated characters, only for chosen characters"
+
+[prompt]
+terse = "implement `squeeze`"
+chatty = "Hello! Could you implement `squeeze` in src/lib.rs? It collapses repeated characters, but only the ones listed in `targets`; the doc comment has the details."
+hurried = "squeeze() still todo!(), implement it per the doc"

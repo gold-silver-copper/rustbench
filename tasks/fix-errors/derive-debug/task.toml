@@ -1,0 +1,14 @@
+id = "derive-debug"
+suite = "fix-errors"
+kind = "fix-error"
+split = "dev"
+difficulty = 1
+summary = "a struct is printed with {:?} but has no Debug"
+
+[prompt]
+terse = "fix it"
+chatty = "Hi! I wanted to dump my sensor readings to the terminal for debugging but now it won't compile. Can you make it build?"
+hurried = "debug print doesnt compile pls fix"
+
+[check]
+stdout = "[Reading { sensor: \"attic\", celsius: 18.5 }, Reading { sensor: \"cellar\", celsius: 12.0 }]\n"

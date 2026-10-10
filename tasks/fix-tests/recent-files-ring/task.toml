@@ -1,0 +1,14 @@
+id = "recent-files-ring"
+suite = "fix-tests"
+kind = "fix-test"
+split = "dev"
+difficulty = 2
+summary = "off-by-one: a ring buffer of recent files wraps one slot too early"
+
+[prompt]
+terse = "recent files test fails, fix"
+chatty = "Hey, the editor's 'recently opened' list forgets files it should remember. `keeps_the_last_three` in tests/visible.rs shows it. Can you track down the bug and fix it? Please leave the test alone."
+hurried = "recent files list broken test failing can u fix"
+
+[check]
+test = true

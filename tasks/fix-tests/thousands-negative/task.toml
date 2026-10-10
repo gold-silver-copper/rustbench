@@ -1,0 +1,14 @@
+id = "thousands-negative"
+suite = "fix-tests"
+kind = "fix-test"
+split = "dev"
+difficulty = 2
+summary = "missing edge case: thousands grouping puts a comma after the minus sign"
+
+[prompt]
+terse = "number format test fails"
+chatty = "Hi! On our finance dashboard, losses show up as \"-,123,456\". `negative_amounts` fails because of it. Positive numbers look fine. Could you fix the formatter?"
+hurried = "negative nums format weird test fails fix"
+
+[check]
+test = true

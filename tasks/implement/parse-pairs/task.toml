@@ -1,0 +1,11 @@
+id = "parse-pairs"
+suite = "implement"
+kind = "implement"
+split = "dev"
+difficulty = 3
+summary = "parse `key=value;...` into a BTreeMap with indexed errors"
+
+[prompt]
+terse = "implement `parse_pairs`"
+chatty = "Hey! Could you implement `parse_pairs` in src/lib.rs? It parses a little `key=value;key=value` format. The doc comments on it and on `PairError` say how whitespace, empty segments and errors work."
+hurried = "parse_pairs is todo!(), implement it. errors etc in the doc comments"

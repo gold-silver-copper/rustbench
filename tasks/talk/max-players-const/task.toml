@@ -1,0 +1,15 @@
+id = "max-players-const"
+suite = "talk"
+kind = "explain"
+split = "heldout"
+difficulty = 1
+summary = "a const computed from consts in another module"
+
+[prompt]
+terse = "What is the value of `MAX_PLAYERS`? Write just the number to a file ANSWER in the crate root."
+chatty = "Hey! I need to tell the server host how many players a lobby can hold. What's the value of `MAX_PLAYERS`? Please write only the number into a file named ANSWER at the crate root."
+hurried = "whats MAX_PLAYERS equal to? number only in ANSWER (crate root)"
+
+[check]
+build = true
+answer = "22"

@@ -1,0 +1,14 @@
+id = "ledger-pay"
+suite = "fix-tests"
+kind = "fix-test"
+split = "dev"
+difficulty = 1
+summary = "swapped arguments: a payment moves money from the payee to the payer"
+
+[prompt]
+terse = "payment test failing, fix it"
+chatty = "Hi! I have a tiny ledger for a club's accounts and `pay_moves_money_to_payee` started failing. The balances come out wrong. Could you find what's off in the library and fix it?"
+hurried = "ledger pay test fails dunno why, fix"
+
+[check]
+test = true

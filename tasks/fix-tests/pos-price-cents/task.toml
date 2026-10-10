@@ -1,0 +1,14 @@
+id = "pos-price-cents"
+suite = "fix-tests"
+kind = "fix-test"
+split = "dev"
+difficulty = 1
+summary = "wrong rounding: dollars are truncated to cents instead of rounded"
+
+[prompt]
+terse = "price test failing, fix"
+chatty = "Hi! Our point-of-sale screen turns $0.29 into 28 cents, and `typed_price_to_cents` fails. Could you fix the conversion?"
+hurried = "cents off by one sometimes, test fails fix"
+
+[check]
+test = true

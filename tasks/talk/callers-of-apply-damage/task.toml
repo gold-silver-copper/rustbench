@@ -1,0 +1,15 @@
+id = "callers-of-apply-damage"
+suite = "talk"
+kind = "explain"
+split = "dev"
+difficulty = 2
+summary = "count the functions that call apply_damage across three files"
+
+[prompt]
+terse = "How many functions call `apply_damage`? Write just the number to a file named ANSWER in the crate root."
+chatty = "Hi! I'm thinking about changing how armor works in `apply_damage` and want to know how much code that touches. How many functions in this crate call `apply_damage`? Please put only the number (digits, nothing else) in a file called ANSWER at the top of the crate, no need to change any code."
+hurried = "how many fns call apply_damage? just the number in ANSWER file (crate root) pls"
+
+[check]
+build = true
+answer = "3"

@@ -1,0 +1,11 @@
+id = "rename-temp-field"
+suite = "edits"
+kind = "edit"
+split = "dev"
+difficulty = 2
+summary = "rename field `temp` of `Reading` to `celsius` everywhere"
+
+[prompt]
+terse = "Rename the `temp` field of `Reading` to `celsius`, and update every use."
+chatty = "Hello! People keep asking whether `Reading::temp` is in Celsius or Fahrenheit, so let's make it obvious: please rename that field to `celsius`. It's used in a few modules and in main, so everything needs updating to match. Values stay in Celsius, nothing else changes."
+hurried = "Reading.temp field -> rename to celsius, fix all the places using it"

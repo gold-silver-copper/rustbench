@@ -1,0 +1,11 @@
+id = "private-fn"
+suite = "fix-errors"
+kind = "fix-error"
+split = "dev"
+difficulty = 1
+summary = "a private function in a module is called from outside it"
+
+[prompt]
+terse = "make it build"
+chatty = "Hi there! My weather forecast formatter won't compile and the error says the conversion function is private. Could you fix that?"
+hurried = "private fn error, forecast_line, fix pls"

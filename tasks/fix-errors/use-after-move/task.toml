@@ -1,0 +1,14 @@
+id = "use-after-move"
+suite = "fix-errors"
+kind = "fix-error"
+split = "dev"
+difficulty = 1
+summary = "a String is moved into a struct and then used again"
+
+[prompt]
+terse = "fix the compile error"
+chatty = "Hey! I'm building a tiny order system and the confirmation message broke the build. Can you get it compiling again without changing the output?"
+hurried = "borrow of moved value somewhere, wont build"
+
+[check]
+stdout = "Order for Ana with 2 item(s)\n"

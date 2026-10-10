@@ -1,0 +1,11 @@
+id = "missing-use"
+suite = "fix-errors"
+kind = "fix-error"
+split = "dev"
+difficulty = 1
+summary = "HashMap is used without being imported"
+
+[prompt]
+terse = "doesn't build, fix"
+chatty = "Hi there, my word counter won't compile and I can't see why, the logic looks fine to me. Could you get it building?"
+hurried = "cant find type error, fix it"

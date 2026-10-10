@@ -1,0 +1,15 @@
+id = "printer-choice"
+suite = "talk"
+kind = "explain"
+split = "heldout"
+difficulty = 3
+summary = "follow settings through a fallback to see which dyn Printer main uses"
+
+[prompt]
+terse = "When `main` runs, which `Printer` type writes the receipt? Write just the type name to a file ANSWER in the crate root."
+chatty = "Hi! Our receipts come out plain even though the default settings say fancy, and I'm confused. When `main` runs, which `Printer` type actually writes the receipt? Please write only the type name into a file named ANSWER at the crate root. Don't change the code yet."
+hurried = "which Printer type does main end up using? type name only -> ANSWER crate root"
+
+[check]
+build = true
+answer = "PlainPrinter"

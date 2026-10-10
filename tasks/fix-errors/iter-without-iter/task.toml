@@ -1,0 +1,11 @@
+id = "iter-without-iter"
+suite = "fix-errors"
+kind = "fix-error"
+split = "dev"
+difficulty = 1
+summary = "map is called on a slice instead of on an iterator"
+
+[prompt]
+terse = "fix compile"
+chatty = "Hello! Converting a list of prices from cents to dollars, but the map call won't compile. Could you fix it?"
+hurried = "map on vec error fix"

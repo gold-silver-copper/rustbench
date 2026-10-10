@@ -1,0 +1,11 @@
+id = "caesar-shift"
+suite = "implement"
+kind = "implement"
+split = "dev"
+difficulty = 2
+summary = "shift ASCII letters with wrap-around, any shift including negative"
+
+[prompt]
+terse = "implement `caesar_shift`"
+chatty = "Hello! Could you write `caesar_shift` in src/lib.rs? The doc comment covers negative and large shifts and which characters are left alone."
+hurried = "caesar_shift needs a body, see doc"

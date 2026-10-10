@@ -1,0 +1,15 @@
+id = "retry-attempts"
+suite = "talk"
+kind = "explain"
+split = "dev"
+difficulty = 3
+summary = "an inclusive retry loop: max_retries = 3 means four calls to send on timeouts"
+
+[prompt]
+terse = "If `send` always fails with `SendError::Timeout`, how many times does `deliver` call `send` on a client made with `Client::new`? Write just the number to a file ANSWER in the crate root."
+chatty = "Hi! Our mail server is getting hammered when it's down, and I'm trying to work out how many requests each message causes. If `send` always fails with `SendError::Timeout`, how many times does `deliver` call `send` on a client made with `Client::new`? Please write only the number into a file named ANSWER at the crate root. No changes to the code yet."
+hurried = "if send always times out how many times does deliver call send (Client::new)? number only in ANSWER crate root"
+
+[check]
+build = true
+answer = "4"

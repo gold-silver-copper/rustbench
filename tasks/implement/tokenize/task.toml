@@ -1,0 +1,11 @@
+id = "tokenize"
+suite = "implement"
+kind = "implement"
+split = "dev"
+difficulty = 4
+summary = "a small expression tokenizer with maximal-munch operators and byte-offset errors"
+
+[prompt]
+terse = "implement `tokenize`"
+chatty = "Hey! I'm writing a tiny expression language and need the tokenizer. Could you implement `tokenize` in src/lib.rs? The doc comments on it and on `Token` describe every token kind and which byte offset to report for each kind of error."
+hurried = "implement tokenize. token rules + error offsets r all in the doc comment"

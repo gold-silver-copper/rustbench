@@ -1,0 +1,14 @@
+id = "todo-reminders"
+suite = "fix-tests"
+kind = "fix-test"
+split = "dev"
+difficulty = 1
+summary = "inverted condition: reminders go out for finished tasks instead of open ones"
+
+[prompt]
+terse = "reminder test failing"
+chatty = "Hi! My to-do app keeps reminding me about things I've already done, and `reminds_about_open_tasks_due_soon` fails. Could you fix the reminder logic?"
+hurried = "reminders for done tasks?? test fails fix"
+
+[check]
+test = true

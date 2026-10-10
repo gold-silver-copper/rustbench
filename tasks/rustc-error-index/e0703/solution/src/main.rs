@@ -1,0 +1,2 @@
+extern "Rust" fn foo() {}
+fn main() { }

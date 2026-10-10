@@ -1,0 +1,11 @@
+id = "missing-use-ordering"
+suite = "fix-errors"
+kind = "fix-error"
+split = "heldout"
+difficulty = 1
+summary = "Ordering is used without being imported"
+
+[prompt]
+terse = "fix compile"
+chatty = "Hey! Sorting race results fastest first and it doesn't compile, says it can't find something. Could you fix it?"
+hurried = "undeclared type error in rank, fix"

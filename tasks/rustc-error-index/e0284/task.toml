@@ -1,0 +1,17 @@
+id = "e0284"
+suite = "rustc-error-index"
+kind = "fix-error"
+split = "dev"
+difficulty = 2
+summary = "This error occurs when the compiler is unable to unambiguously infer the return type of a function or method which is generic on return type, such as the `collect` method for `Iterator`s."
+source = "rust-lang/rust@6e4cba3380a6f9e1e4d7672e11e40372bf04e873 compiler/rustc_error_codes/src/error_codes/E0284.md"
+license = "MIT OR Apache-2.0"
+
+[prompt]
+terse = "fix the compile error"
+chatty = "Hey, I'm stuck on a compiler error in this little crate. Can you fix it so it builds? Please keep the behavior as it is."
+hurried = "doesnt compile pls fix"
+
+[check]
+max_shrink = 0.25
+build = true

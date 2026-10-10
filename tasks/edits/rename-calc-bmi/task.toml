@@ -1,0 +1,11 @@
+id = "rename-calc-bmi"
+suite = "edits"
+kind = "edit"
+split = "heldout"
+difficulty = 2
+summary = "rename `calc_bmi` to `body_mass_index` in every file"
+
+[prompt]
+terse = "Rename the function `calc_bmi` to `body_mass_index` everywhere (definition, all callers, tests). No other changes."
+chatty = "I'm cleaning up names in my little health metrics crate. `calc_bmi` reads badly, so could you rename it to `body_mass_index`? It's used in the report module, main.rs and some tests, so please update every place, and don't leave the old name around."
+hurried = "rename calc_bmi -> body_mass_index everywhere incl tests"

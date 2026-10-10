@@ -1,0 +1,11 @@
+id = "compress-ranges"
+suite = "implement"
+kind = "implement"
+split = "dev"
+difficulty = 3
+summary = "describe a set of integers as runs like `1-3,5`"
+
+[prompt]
+terse = "implement `compress_ranges`"
+chatty = "Hello! Could you implement `compress_ranges` in src/lib.rs? It turns a list of numbers into a compact string like `1-3,5`; the doc comment says when a run becomes a range and how negatives look."
+hurried = "pls implement compress_ranges, format in doc comment"

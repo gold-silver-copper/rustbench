@@ -1,0 +1,17 @@
+id = "e0616"
+suite = "rustc-error-index"
+kind = "fix-error"
+split = "heldout"
+difficulty = 1
+summary = "Attempted to access a private field on a struct."
+source = "rust-lang/rust@6e4cba3380a6f9e1e4d7672e11e40372bf04e873 compiler/rustc_error_codes/src/error_codes/E0616.md"
+license = "MIT OR Apache-2.0"
+
+[prompt]
+terse = "make this compile; keep the behavior the same"
+chatty = "Hi! This crate doesn't compile right now. Could you get it building again without changing what the code is meant to do?"
+hurried = "compile error, make it build quick"
+
+[check]
+build = true
+stdout = "0\n"

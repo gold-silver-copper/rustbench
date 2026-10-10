@@ -1,0 +1,14 @@
+id = "thermostat-fahrenheit"
+suite = "fix-tests"
+kind = "fix-test"
+split = "dev"
+difficulty = 1
+summary = "wrong operator grouping: 9 / 5 is computed first in integer arithmetic"
+
+[prompt]
+terse = "conversion test fails"
+chatty = "Hello! The thermostat display shows 132°F for boiling water, and `boiling_point_in_fahrenheit` fails. The Fahrenheit-to-Celsius direction seems fine. Could you fix the other one?"
+hurried = "c to f broken, test fails. fix pls"
+
+[check]
+test = true

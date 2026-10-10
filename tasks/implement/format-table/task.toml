@@ -1,0 +1,11 @@
+id = "format-table"
+suite = "implement"
+kind = "implement"
+split = "heldout"
+difficulty = 3
+summary = "align rows of cells into a ` | `-separated text table"
+
+[prompt]
+terse = "implement `format_table`"
+chatty = "Hi! Could you implement `format_table` in src/lib.rs? It lays out rows of strings as an aligned text table; the doc comment covers short rows, widths and trailing spaces."
+hurried = "format_table is todo!() — implement per doc comment"

@@ -1,0 +1,14 @@
+id = "question-mark-in-main"
+suite = "fix-errors"
+kind = "fix-error"
+split = "dev"
+difficulty = 1
+summary = "`?` is used in a main that returns ()"
+
+[prompt]
+terse = "fix compile error"
+chatty = "Hi! I'm parsing a list of numbers and printing the total. The `?` in main doesn't compile, could you fix it?"
+hurried = "? in main doesnt work, fix"
+
+[check]
+stdout = "total: 49\n"

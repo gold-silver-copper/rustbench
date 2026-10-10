@@ -1,0 +1,11 @@
+id = "str-plus-str"
+suite = "fix-errors"
+kind = "fix-error"
+split = "dev"
+difficulty = 1
+summary = "two &str values are joined with +"
+
+[prompt]
+terse = "fix the build"
+chatty = "Hi! I want names sorted as \"Last, First\" for a class roster. The concatenation won't compile though. Could you fix it?"
+hurried = "cant add str fix pls"

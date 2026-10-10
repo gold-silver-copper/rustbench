@@ -1,0 +1,11 @@
+id = "misspelled-method"
+suite = "fix-errors"
+kind = "fix-error"
+split = "dev"
+difficulty = 1
+summary = "a method name is misspelled"
+
+[prompt]
+terse = "fix the build"
+chatty = "Hey, small waiting-list helper here that won't compile, the error says some method doesn't exist. Could you take a look?"
+hurried = "no method error fix pls"

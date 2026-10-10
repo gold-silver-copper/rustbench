@@ -1,0 +1,11 @@
+id = "method-missing-arg"
+suite = "fix-errors"
+kind = "fix-error"
+split = "heldout"
+difficulty = 1
+summary = "a method is called without one of its arguments"
+
+[prompt]
+terse = "fix the build"
+chatty = "Hi! The warehouse code for receiving a delivery won't compile, something about the number of arguments. Each name on the note comes in with the same quantity. Can you fix it?"
+hurried = "wrong number of args in receive() fix"

@@ -1,0 +1,11 @@
+id = "ref-without-dyn"
+suite = "fix-errors"
+kind = "fix-error"
+split = "heldout"
+difficulty = 1
+summary = "a trait object reference is written without `dyn`"
+
+[prompt]
+terse = "fix"
+chatty = "Hi! Checkout applies a list of discounts in order. The function signature won't compile. Could you fix it?"
+hurried = "&Discount error expected type found trait, fix pls"

@@ -1,0 +1,14 @@
+id = "crossing-light"
+suite = "fix-tests"
+kind = "fix-test"
+split = "dev"
+difficulty = 1
+summary = "state machine: yellow goes back to green instead of on to red"
+
+[prompt]
+terse = "traffic light test fails"
+chatty = "Hi! The pedestrian crossing controller never shows red, it seems, and `yellow_turns_red` fails. Could you fix the light sequence?"
+hurried = "light never goes red?? test fails pls fix"
+
+[check]
+test = true

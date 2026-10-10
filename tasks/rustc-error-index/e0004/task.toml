@@ -1,0 +1,17 @@
+id = "e0004"
+suite = "rustc-error-index"
+kind = "fix-error"
+split = "heldout"
+difficulty = 3
+summary = "This error indicates that the compiler cannot guarantee a matching pattern for one or more possible inputs to a match expression. Guaranteed matches are required in order to assign values to match exp"
+source = "rust-lang/rust@6e4cba3380a6f9e1e4d7672e11e40372bf04e873 compiler/rustc_error_codes/src/error_codes/E0004.md"
+license = "MIT OR Apache-2.0"
+
+[prompt]
+terse = "get the crate compiling without changing what it does"
+chatty = "Hello! I wrote this small Rust crate but the compiler rejects it. Would you mind fixing it so it compiles, without changing what it does?"
+hurried = "doesnt compile pls fix"
+
+[check]
+max_shrink = 0.25
+build = true

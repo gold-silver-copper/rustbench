@@ -1,0 +1,11 @@
+id = "mat-mul"
+suite = "implement"
+kind = "implement"
+split = "dev"
+difficulty = 4
+summary = "integer matrix multiply with shape checks and overflow detection, errors in a stated order"
+
+[prompt]
+terse = "implement `mat_mul`"
+chatty = "Hi! Could you implement `mat_mul` in src/lib.rs? It multiplies integer matrices stored as lists of rows. The doc comments on it and on `MatError` say which shapes are rejected, in which order the checks run, and how overflow is detected."
+hurried = "implement mat_mul, error order + overflow rules in the doc comment"

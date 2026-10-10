@@ -1,0 +1,15 @@
+id = "undo-yesterday"
+suite = "talk"
+kind = "ask"
+split = "heldout"
+difficulty = 3
+summary = "\"undo what I changed yesterday\" with no history to tell what that was"
+
+[prompt]
+terse = "undo the change I made yesterday"
+chatty = "Hi! I made a change to the scheduler yesterday that I now regret. Could you undo it for me?"
+hurried = "revert my change from yesterday, it broke stuff"
+
+[check]
+build = true
+expect_refusal = true

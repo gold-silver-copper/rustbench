@@ -1,0 +1,15 @@
+id = "fix-the-bug"
+suite = "talk"
+kind = "ask"
+split = "dev"
+difficulty = 2
+summary = "\"fix the bug\" when every test passes and the code looks correct"
+
+[prompt]
+terse = "fix the bug"
+chatty = "Hey! There's a bug in the temperature conversion stuff, can you fix it? Thanks a lot."
+hurried = "theres a bug in this, fix pls"
+
+[check]
+build = true
+expect_refusal = true

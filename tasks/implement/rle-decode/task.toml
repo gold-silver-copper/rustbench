@@ -1,0 +1,11 @@
+id = "rle-decode"
+suite = "implement"
+kind = "implement"
+split = "heldout"
+difficulty = 2
+summary = "decode `a3bc2`-style run-length text with byte-offset errors"
+
+[prompt]
+terse = "implement `rle_decode`"
+chatty = "Hi! Could you implement `rle_decode` in src/lib.rs? It decodes a run-length format; the doc comment defines the format, the allowed counts and which offset to return on bad input."
+hurried = "rle_decode = todo!(). implement it, errors are byte offsets (see doc)"

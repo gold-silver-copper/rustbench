@@ -1,0 +1,11 @@
+id = "collect-needs-type"
+suite = "fix-errors"
+kind = "fix-error"
+split = "dev"
+difficulty = 1
+summary = "collect() result has no type annotation"
+
+[prompt]
+terse = "fix"
+chatty = "Hey! Tag counter for my notes app won't compile, says type annotations needed. Can you fix it?"
+hurried = "type annotations needed error, fix"

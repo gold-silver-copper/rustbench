@@ -1,0 +1,14 @@
+id = "winter-high"
+suite = "fix-tests"
+kind = "fix-test"
+split = "dev"
+difficulty = 1
+summary = "wrong initial value: the daily high starts at 0, so all-negative days report 0"
+
+[prompt]
+terse = "fix the failing high temp test"
+chatty = "Hi! Our winter weather log reports a high of 0.0° on days where it never got above freezing, and `freezing_day_high` fails. Could you fix the code?"
+hurried = "daily high wrong on cold days, test fail. fix"
+
+[check]
+test = true

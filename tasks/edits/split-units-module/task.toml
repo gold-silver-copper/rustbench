@@ -1,0 +1,11 @@
+id = "split-units-module"
+suite = "edits"
+kind = "edit"
+split = "heldout"
+difficulty = 3
+summary = "split a units module into length and mass submodules in their own files"
+
+[prompt]
+terse = "Split src/units.rs into two submodules: the length code goes to src/units/length.rs (`units::length`), the mass code to src/units/mass.rs (`units::mass`). Keep src/units.rs as the parent with `pub mod length; pub mod mass;` and re-export everything so existing `task::units::...` paths still work."
+chatty = "Hi! src/units.rs has grown into a jumble of length and mass conversions. Could you split it up? I'd like the length stuff in src/units/length.rs as `units::length`, and the mass stuff in src/units/mass.rs as `units::mass`. src/units.rs should stay as the parent module, declaring `pub mod length;` and `pub mod mass;` and re-exporting their items, so code using the old `task::units::...` paths keeps compiling. No behaviour changes, please."
+hurried = "split units.rs: length stuff -> src/units/length.rs (units::length), mass stuff -> src/units/mass.rs (units::mass). keep units.rs as parent w/ pub mod length; pub mod mass; + re-exports so old task::units::X paths still work"

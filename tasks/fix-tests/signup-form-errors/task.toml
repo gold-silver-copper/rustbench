@@ -1,0 +1,14 @@
+id = "signup-form-errors"
+suite = "fix-tests"
+kind = "fix-test"
+split = "heldout"
+difficulty = 2
+summary = "early return: form validation stops after the first problem"
+
+[prompt]
+terse = "form validation test fails"
+chatty = "Hi! Our sign-up form is supposed to show every problem at once, but it only ever shows one, and `reports_every_problem` fails. Could you fix the validation?"
+hurried = "form only shows 1 error, test fails fix pls"
+
+[check]
+test = true

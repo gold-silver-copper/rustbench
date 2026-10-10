@@ -1,0 +1,5 @@
+Which limit should go to 100? src/limits.rs has three:
+- `MAX_UPLOAD_MB` = 25 (largest single file, in MB),
+- `MAX_FILES_PER_REQUEST` = 10 (files per request),
+- `REQUESTS_PER_MINUTE` = 60 (rate limit per client).
+What error are users seeing? That tells me which one they're hitting.

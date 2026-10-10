@@ -1,0 +1,14 @@
+id = "shop-reorder"
+suite = "fix-tests"
+kind = "fix-test"
+split = "dev"
+difficulty = 1
+summary = "inverted condition: reorder suggestions keep discontinued items and drop the rest"
+
+[prompt]
+terse = "reorder test fails, fix"
+chatty = "Hey! The shop's reorder list suggests items we've stopped selling, and `suggests_low_stock_items_still_sold` fails. Could you fix the filter?"
+hurried = "reorder list wrong, test fails fix pls"
+
+[check]
+test = true

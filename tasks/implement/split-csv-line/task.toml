@@ -1,0 +1,11 @@
+id = "split-csv-line"
+suite = "implement"
+kind = "implement"
+split = "heldout"
+difficulty = 3
+summary = "split one CSV line with quoted fields, doubled quotes and positioned errors"
+
+[prompt]
+terse = "implement `split_csv_line`"
+chatty = "Hey! Could you implement `split_csv_line` in src/lib.rs? It splits a single CSV line into fields, handling quoted fields. The doc comments on it and on `CsvError` cover the quoting rules and which errors to return."
+hurried = "split_csv_line needs implementing. quoting + error rules in the docs"

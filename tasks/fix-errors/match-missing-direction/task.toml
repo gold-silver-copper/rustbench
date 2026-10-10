@@ -1,0 +1,11 @@
+id = "match-missing-direction"
+suite = "fix-errors"
+kind = "fix-error"
+split = "heldout"
+difficulty = 2
+summary = "a match on a heading enum misses one variant"
+
+[prompt]
+terse = "fix"
+chatty = "Hey! Little grid robot: `step` moves one square in the heading's direction. It won't compile right now. The doc comment has the rules. Can you fix it?"
+hurried = "non exhaustive patterns in step() fix"

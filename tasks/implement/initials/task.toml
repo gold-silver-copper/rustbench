@@ -1,0 +1,11 @@
+id = "initials"
+suite = "implement"
+kind = "implement"
+split = "dev"
+difficulty = 1
+summary = "initials of a name, skipping words that do not start with a letter"
+
+[prompt]
+terse = "implement `initials`"
+chatty = "Hi! I need the `initials` function in src/lib.rs filled in. The doc comment explains which words are skipped and how uppercasing works."
+hurried = "initials() needs implementing, doc comment says how"

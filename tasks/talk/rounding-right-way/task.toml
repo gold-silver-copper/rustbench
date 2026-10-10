@@ -1,0 +1,15 @@
+id = "rounding-right-way"
+suite = "talk"
+kind = "ask"
+split = "dev"
+difficulty = 3
+summary = "\"change the rounding to the right way\" with no rule named"
+
+[prompt]
+terse = "the rounding is wrong, change it to the right way"
+chatty = "Hello! Our accountant says the invoice rounding isn't done the right way. Can you change it so it rounds correctly?"
+hurried = "rounding is wrong on invoices, fix it to round the right way"
+
+[check]
+build = true
+expect_refusal = true

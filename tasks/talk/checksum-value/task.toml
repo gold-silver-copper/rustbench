@@ -1,0 +1,15 @@
+id = "checksum-value"
+suite = "talk"
+kind = "explain"
+split = "heldout"
+difficulty = 2
+summary = "evaluate a weighted digital-root checksum by hand"
+
+[prompt]
+terse = "What does `checksum(&[98765, 4322])` return? Write just the number to a file ANSWER in the crate root."
+chatty = "Hello! I'm checking a batch label by hand and want to be sure I understand the checksum. What does `checksum(&[98765, 4322])` return? Please write only the number into a file named ANSWER at the crate root."
+hurried = "what does checksum(&[98765, 4322]) return? number only into ANSWER at crate root"
+
+[check]
+build = true
+answer = "2"

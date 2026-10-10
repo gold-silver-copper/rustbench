@@ -1,0 +1,14 @@
+id = "room-usage"
+suite = "fix-tests"
+kind = "fix-test"
+split = "heldout"
+difficulty = 1
+summary = "swapped arguments: meeting lengths are computed from end to start"
+
+[prompt]
+terse = "room usage test fails"
+chatty = "Hi! The meeting room report says rooms were booked for 0 minutes all week, and `adds_up_meeting_minutes` fails. Could you find what's wrong and fix it?"
+hurried = "booked minutes always 0?? test fails fix"
+
+[check]
+test = true

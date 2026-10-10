@@ -1,0 +1,11 @@
+id = "result-parse-rgb"
+suite = "edits"
+kind = "edit"
+split = "dev"
+difficulty = 3
+summary = "parse_hex returns Result<Rgb, String> instead of panicking; palette propagates the error"
+
+[prompt]
+terse = "`color::parse_hex` panics on bad input. Change it to `pub fn parse_hex(s: &str) -> Result<Rgb, String>` returning Err with a message instead of panicking, change `palette::parse_palette` to `-> Result<Vec<Rgb>, String>` propagating the error with `?`, and update main.rs to handle it."
+chatty = "Hey, the hex color parser crashes the whole program whenever someone types a bad color like \"#12zz00\". I'd rather it reported an error. Could you change `color::parse_hex` so it returns `Result<Rgb, String>` (an error message in the Err, no panics at all, even for weird lengths or non-ASCII), and make `palette::parse_palette` return `Result<Vec<Rgb>, String>` so the first bad color is passed up with `?`? main.rs should then print the error instead of blowing up. Valid inputs should parse exactly as before."
+hurried = "parse_hex panics on garbage, make it return Result<Rgb, String> (no panic ever). parse_palette -> Result<Vec<Rgb>, String> w/ ? , fix main"

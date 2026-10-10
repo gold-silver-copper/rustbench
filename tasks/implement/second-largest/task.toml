@@ -1,0 +1,11 @@
+id = "second-largest"
+suite = "implement"
+kind = "implement"
+split = "heldout"
+difficulty = 1
+summary = "second largest distinct value of a slice"
+
+[prompt]
+terse = "implement `second_largest`"
+chatty = "Hi! Could you implement `second_largest` in src/lib.rs? Note from the doc comment that it's about distinct values."
+hurried = "second_largest todo, implement. distinct values!"

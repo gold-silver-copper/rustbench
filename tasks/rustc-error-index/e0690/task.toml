@@ -1,0 +1,17 @@
+id = "e0690"
+suite = "rustc-error-index"
+kind = "fix-error"
+split = "heldout"
+difficulty = 2
+summary = "A struct with the representation hint `repr(transparent)` had two or more fields that were not guaranteed to be zero-sized."
+source = "rust-lang/rust@6e4cba3380a6f9e1e4d7672e11e40372bf04e873 compiler/rustc_error_codes/src/error_codes/E0690.md"
+license = "MIT OR Apache-2.0"
+
+[prompt]
+terse = "get the crate compiling without changing what it does"
+chatty = "Hey, I'm stuck on a compiler error in this little crate. Can you fix it so it builds? Please keep the behavior as it is."
+hurried = "doesnt compile pls fix"
+
+[check]
+max_shrink = 0.25
+build = true

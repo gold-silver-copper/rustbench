@@ -1,0 +1,11 @@
+id = "result-withdraw"
+suite = "edits"
+kind = "edit"
+split = "dev"
+difficulty = 3
+summary = "Account::withdraw returns Result<(), BankError> instead of panicking; callers updated"
+
+[prompt]
+terse = "Change `Account::withdraw` to return `Result<(), BankError>` instead of panicking: on insufficient funds return `BankError::InsufficientFunds { needed, available }` and leave the balance unchanged. Update all callers."
+chatty = "Hi there! `Account::withdraw` currently panics when there isn't enough money, which takes down the whole app. We already have a `BankError` enum with an `InsufficientFunds { needed, available }` variant that `transfer` uses, so could you make `withdraw` return `Result<(), BankError>` and give back that variant (needed = the amount asked for, available = the current balance) instead of panicking? The balance shouldn't change when it fails. Then fix up everything that calls it."
+hurried = "withdraw shouldnt panic, return Result<(), BankError> w/ the existing InsufficientFunds {needed, available} variant, balance untouched on fail. fix callers"

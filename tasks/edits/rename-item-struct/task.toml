@@ -1,0 +1,11 @@
+id = "rename-item-struct"
+suite = "edits"
+kind = "edit"
+split = "dev"
+difficulty = 2
+summary = "rename struct `Item` to `StockItem` across modules and main"
+
+[prompt]
+terse = "Rename the struct `Item` to `StockItem` across the whole crate."
+chatty = "Hi there, `Item` is getting too generic a name in this inventory code now that we're adding other kinds of items. Could you rename the struct to `StockItem` everywhere: the definition, its impl, the warehouse and restock modules, and main? Nothing else should change."
+hurried = "rename Item struct to StockItem, everywhere its used (all modules + main)"

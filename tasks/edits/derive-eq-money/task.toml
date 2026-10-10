@@ -1,0 +1,11 @@
+id = "derive-eq-money"
+suite = "edits"
+kind = "edit"
+split = "dev"
+difficulty = 1
+summary = "derive PartialEq and Eq on `Money` and `Currency`"
+
+[prompt]
+terse = "Derive `PartialEq` and `Eq` for `Money` and `Currency`."
+chatty = "Hello! I'd like to write tests like `assert_eq!(total, Money::new(500, Currency::Eur))`, but `Money` and `Currency` can't be compared with `==` yet. Could you derive `PartialEq` and `Eq` on both types? Field-by-field equality is exactly what I want."
+hurried = "Money + Currency need PartialEq and Eq derives, want to use == / assert_eq on them"

@@ -1,0 +1,11 @@
+id = "private-target-getter"
+suite = "edits"
+kind = "edit"
+split = "heldout"
+difficulty = 2
+summary = "make a struct field private, add a getter, and route a direct write through the clamping setter"
+
+[prompt]
+terse = "Make `Thermostat::target` private and add a getter `pub fn target(&self) -> f32`. Update every use outside the struct's impl: reads use the getter, writes go through `set_target` (which clamps to 10.0..=30.0)."
+chatty = "Hey! Someone set the thermostat to 85 degrees by writing straight into `Thermostat::target`, skipping the clamping in `set_target`. Could you make the `target` field private and add a getter, `pub fn target(&self) -> f32`? Anything outside the impl that reads it should use the getter, and anything that writes it should go through `set_target` so it stays within 10.0..=30.0."
+hurried = "make Thermostat.target private + add getter pub fn target(&self) -> f32. reads elsewhere use the getter, writes go thru set_target (clamps 10-30)"

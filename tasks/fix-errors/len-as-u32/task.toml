@@ -1,0 +1,11 @@
+id = "len-as-u32"
+suite = "fix-errors"
+kind = "fix-error"
+split = "heldout"
+difficulty = 1
+summary = "a usize count is returned from a function declared to return u32"
+
+[prompt]
+terse = "fix compile error"
+chatty = "Hi! Message stats: the word count goes into a u32 column, but the function doesn't compile. Can you fix it?"
+hurried = "expected u32 found usize fix"

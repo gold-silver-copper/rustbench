@@ -1,0 +1,11 @@
+id = "split-shapes-module"
+suite = "edits"
+kind = "edit"
+split = "dev"
+difficulty = 3
+summary = "split src/shapes.rs into one file per shape, keeping the old paths working"
+
+[prompt]
+terse = "Split src/shapes.rs: move `Circle` and its impls to src/shapes/circle.rs and `Square` and its impls to src/shapes/square.rs. Keep src/shapes.rs as the parent module (`pub mod circle; pub mod square;`) and re-export both so `task::shapes::Circle` and `task::shapes::Square` keep working."
+chatty = "src/shapes.rs is getting crowded. Could you give each shape its own file? `Circle` (with all its impls) should live in src/shapes/circle.rs and `Square` in src/shapes/square.rs, as public submodules `shapes::circle` and `shapes::square`. Please keep src/shapes.rs as the parent module and re-export the two types from it, so existing code using `task::shapes::Circle` / `task::shapes::Square` doesn't break."
+hurried = "split shapes.rs - Circle into src/shapes/circle.rs, Square into src/shapes/square.rs (pub mod circle / square), keep shapes.rs as parent and pub use them so shapes::Circle etc still work"

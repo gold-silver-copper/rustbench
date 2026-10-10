@@ -1,0 +1,14 @@
+id = "log-first-error"
+suite = "fix-tests"
+kind = "fix-test"
+split = "dev"
+difficulty = 1
+summary = "early return: the log scanner gives up at the first blank or comment line"
+
+[prompt]
+terse = "first_error test fails"
+chatty = "Hey, I'm scanning service logs for the first ERROR line and `finds_error_after_blank_line` fails: it returns None even though there's an error further down. Could you fix the scanner?"
+hurried = "log scan misses errors, test failing pls fix"
+
+[check]
+test = true

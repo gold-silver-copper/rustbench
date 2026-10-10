@@ -1,0 +1,11 @@
+id = "derive-debug-geometry"
+suite = "edits"
+kind = "edit"
+split = "dev"
+difficulty = 1
+summary = "derive Debug on `Point` and `Segment`"
+
+[prompt]
+terse = "Derive `Debug` for `Point` and `Segment`."
+chatty = "Hi! I keep wanting to `dbg!` segments while debugging this geometry code, but neither `Point` nor `Segment` implements Debug. Could you derive `Debug` on both of them? The standard derived output is fine."
+hurried = "pls add #[derive(Debug)] to Point and Segment so i can print them w {:?}"

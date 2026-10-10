@@ -1,0 +1,11 @@
+id = "bare-trait-object"
+suite = "fix-errors"
+kind = "fix-error"
+split = "dev"
+difficulty = 1
+summary = "a trait object type is written without `dyn`"
+
+[prompt]
+terse = "fix"
+chatty = "Hey there! I have a list of shapes behind boxes and want the total area, but the signature won't compile. Could you fix it?"
+hurried = "Box<Shape> error, fix"

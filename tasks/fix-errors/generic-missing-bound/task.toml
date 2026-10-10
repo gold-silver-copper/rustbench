@@ -1,0 +1,11 @@
+id = "generic-missing-bound"
+suite = "fix-errors"
+kind = "fix-error"
+split = "dev"
+difficulty = 2
+summary = "a generic function compares values without a PartialOrd bound"
+
+[prompt]
+terse = "fix the build"
+chatty = "Hello! I wanted a generic `largest` so I can use it for scores and temperatures alike, but it won't compile. Could you help?"
+hurried = "generic largest fn wont compile, binary op error"

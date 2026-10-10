@@ -1,0 +1,15 @@
+id = "panics-on-missing-sku"
+suite = "talk"
+kind = "explain"
+split = "heldout"
+difficulty = 2
+summary = "the one PriceList method that indexes a HashMap and panics on an unknown key"
+
+[prompt]
+terse = "Which method of `PriceList` panics when given a SKU that isn't in the list? Write just the method name to a file ANSWER in the crate root."
+chatty = "Hi! The checkout crashed when someone scanned an item we don't sell. Which `PriceList` method panics when asked about a SKU that isn't in the list? Please write only the method name into a file called ANSWER at the crate root, I'll fix it myself."
+hurried = "which PriceList method panics on unknown sku? method name only in ANSWER at crate root"
+
+[check]
+build = true
+answer = "price_of"

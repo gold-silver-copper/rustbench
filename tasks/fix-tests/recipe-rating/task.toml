@@ -1,0 +1,14 @@
+id = "recipe-rating"
+suite = "fix-tests"
+kind = "fix-test"
+split = "heldout"
+difficulty = 1
+summary = "wrong rounding: the average rating is floored to one decimal instead of rounded"
+
+[prompt]
+terse = "rating test fails, fix"
+chatty = "Hello! On our recipe site a dish rated 5, 5 and 4 shows \"4.6 stars\" and `shows_rounded_average` fails. Could you fix the rating code?"
+hurried = "stars avg off by 0.1 test fails fix"
+
+[check]
+test = true

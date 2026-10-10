@@ -1,0 +1,11 @@
+id = "generic-largest"
+suite = "edits"
+kind = "edit"
+split = "dev"
+difficulty = 2
+summary = "make largest generic over T: PartialOrd + Copy"
+
+[prompt]
+terse = "Make `util::largest` generic: `pub fn largest<T: PartialOrd + Copy>(items: &[T]) -> Option<T>`. Behaviour for i32 must stay the same (None for an empty slice, first of equal maxima)."
+chatty = "Hi! `largest` in util.rs only works on `i32` slices, but now I need it for floats and chars too. Could you make it generic, with the signature `largest<T: PartialOrd + Copy>(items: &[T]) -> Option<T>`? It should still return None for an empty slice, and nothing else should need to change for the existing i32 callers."
+hurried = "make util::largest generic -> largest<T: PartialOrd + Copy>(items: &[T]) -> Option<T>, need it for f64/char. empty still None"

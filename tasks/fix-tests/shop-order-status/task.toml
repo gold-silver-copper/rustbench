@@ -1,0 +1,14 @@
+id = "shop-order-status"
+suite = "fix-tests"
+kind = "fix-test"
+split = "heldout"
+difficulty = 2
+summary = "state machine: cancelling a paid order cancels it instead of refunding it"
+
+[prompt]
+terse = "order status test fails"
+chatty = "Hi! In our web shop, customers who cancel after paying never get a refund: the order just says Cancelled. `cancel_after_paying_refunds` fails. The lifecycle is described in the doc comment. Could you fix it?"
+hurried = "paid then cancel should refund, test fails fix"
+
+[check]
+test = true

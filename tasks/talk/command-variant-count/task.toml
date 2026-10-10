@@ -1,0 +1,15 @@
+id = "command-variant-count"
+suite = "talk"
+kind = "explain"
+split = "dev"
+difficulty = 1
+summary = "count enum variants; a stale doc comment says five and one variant is commented out"
+
+[prompt]
+terse = "How many variants does the `Command` enum have? Write just the number to a file ANSWER in the crate root."
+chatty = "Hi, quick one: I'm writing the help text for my todo CLI. How many variants does the `Command` enum have right now? Please write only the number into a file named ANSWER in the crate root. Don't change anything else."
+hurried = "how many variants in Command enum? number only, ANSWER file at crate root"
+
+[check]
+build = true
+answer = "6"
